@@ -1,0 +1,1 @@
+return ctx.getValue(PatternContext.INJECTED_CONTEXT) instanceof EClass;
