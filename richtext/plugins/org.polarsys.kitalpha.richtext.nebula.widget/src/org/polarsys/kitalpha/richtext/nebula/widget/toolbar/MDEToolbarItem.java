@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2017, 2024 Thales Global Services S.A.S. and others
  *  This program and the accompanying materials are made available under the
  *  terms of the Eclipse Public License 2.0 which is available at
  *  http://www.eclipse.org/legal/epl-2.0
@@ -8,12 +8,15 @@
  * 
  * Contributors:
  *  Thales Global Services S.A.S - initial API and implementation
+ *  Obeo - Linux Webkit GTK compatibility
  ******************************************************************************/
 package org.polarsys.kitalpha.richtext.nebula.widget.toolbar;
 
 import java.net.URL;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.nebula.widgets.richtext.toolbar.ToolbarButton;
+import org.eclipse.swt.widgets.Display;
 import org.polarsys.kitalpha.richtext.common.intf.MDERichTextWidget;
 
 /**
@@ -40,10 +43,24 @@ public class MDEToolbarItem extends ToolbarButton {
 	
 	@Override
 	public final Object execute() {
-		if (handler != null){
+		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+			Display.getCurrent().asyncExec(new Runnable() {
+
+				@Override
+				public void run() {
+					executeHandler();
+				}
+			});
+		} else {
+				executeHandler();
+				}
+		return super.execute();
+	}
+	
+	private void executeHandler() {
+		if (handler != null) {
 			handler.execute(richText);
 		}
-		return super.execute();
 	}
 
 }

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2017, 2024 Thales Global Services S.A.S. and others
  *  This program and the accompanying materials are made available under the
  *  terms of the Eclipse Public License 2.0 which is available at
  *  http://www.eclipse.org/legal/epl-2.0
@@ -8,6 +8,7 @@
  * 
  * Contributors:
  *  Thales Global Services S.A.S - initial API and implementation
+ *  Obeo - Linux Webkit GTK compatibility
  ******************************************************************************/
 package org.polarsys.kitalpha.richtext.nebula.widget;
 
@@ -20,7 +21,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.eclipse.core.runtime.Assert;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.nebula.widgets.richtext.RichTextEditorConfiguration;
+import org.eclipse.swt.widgets.Display;
 
 /**
  * 
@@ -122,5 +125,19 @@ public class MDENebulaRichTextConfiguration extends RichTextEditorConfiguration 
 
 		setOption(MDERichTextConstants.TOOLBAR_POSITION, postion);
 	}
+	
+	@Override
+	public void customizeToolbar() {
+		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+			Display.getCurrent().asyncExec(new Runnable() {
 
+				@Override
+				public void run() {
+					MDENebulaRichTextConfiguration.super.customizeToolbar();
+				}
+			});
+		} else {
+			super.customizeToolbar();
+		}
+	}
 }

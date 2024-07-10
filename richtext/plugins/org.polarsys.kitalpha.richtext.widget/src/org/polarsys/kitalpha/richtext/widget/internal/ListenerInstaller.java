@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2017, 2024 Thales Global Services S.A.S.
+ * Copyright (c) 2017, 2024 Thales Global Services S.A.S. and others
  *  This program and the accompanying materials are made available under the
  *  terms of the Eclipse Public License 2.0 which is available at
  *  http://www.eclipse.org/legal/epl-2.0
@@ -8,6 +8,7 @@
  * 
  * Contributors:
  *  Thales Global Services S.A.S - initial API and implementation
+ *  Obeo - Linux Webkit GTK compatibility
  ******************************************************************************/
 package org.polarsys.kitalpha.richtext.widget.internal;
 
@@ -48,14 +49,27 @@ import org.xml.sax.helpers.DefaultHandler;
 public class ListenerInstaller {
 
 	/**
-	 * Creates all the Java listeners for the current widget. In order to bind the
-	 * listeners to the rich text widget, the
-	 * {@link ListenerInstaller#installAllListeners(MDENebulaBasedRichTextWidget)}
-	 * method must be called afterwards.
+	 * Creates all the Java listeners for the current widget. In order to bind the listeners to the rich text widget,
+	 * the {@link ListenerInstaller#installAllListeners(MDENebulaBasedRichTextWidget)} method must be called afterwards.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	public void createAllListeners(final MDENebulaBasedRichTextWidget widget) {
+		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+			Display.getCurrent().asyncExec(new Runnable() {
+
+				@Override
+				public void run() {
+					doCreateAllListeners(widget);
+				}
+			});
+		} else {
+			doCreateAllListeners(widget);
+		}
+	}
+
+	private void doCreateAllListeners(final MDENebulaBasedRichTextWidget widget) {
 		createBeforePasteConfirmationDialogListener(widget);
 		createShouldCleanupClipboardFunction(widget);
 		createOpenLinkListener(widget);
@@ -174,22 +188,36 @@ public class ListenerInstaller {
 			}
 		};
 	}
+
 	/**
 	 * Installs on the rich text widget the Java listeners created by the
-	 * {@link ListenerInstaller#createAllListeners(MDENebulaBasedRichTextWidget)}.
-	 * The
-	 * {@link ListenerInstaller#createAllListeners(MDENebulaBasedRichTextWidget)}
-	 * method must thus be called before.
+	 * {@link ListenerInstaller#createAllListeners(MDENebulaBasedRichTextWidget)}. The
+	 * {@link ListenerInstaller#createAllListeners(MDENebulaBasedRichTextWidget)} method must thus be called before.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	public void installAllListeners(final MDENebulaBasedRichTextWidget widget) {
+		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+			Display.getCurrent().asyncExec(new Runnable() {
+
+				@Override
+				public void run() {
+					doInstallAllListeners(widget);
+				}
+			});
+		} else {
+			doInstallAllListeners(widget);
+		}
+	}
+
+	private void doInstallAllListeners(MDENebulaBasedRichTextWidget widget) {
 		installBeforePasteConfirmationDialogListener(widget);
 		installOpenLinkListener(widget);
-    installFocusOutListener(widget);
+		installFocusOutListener(widget);
 		installChangeNotificationHandlerListener(widget);
 		installChangeContentListener(widget);
-    installFocusInListener(widget);
+		installFocusInListener(widget);
 		installDataReadyEventListener(widget);
 		installSetDataEventListener(widget);
 	}
@@ -198,8 +226,7 @@ public class ListenerInstaller {
 		new BrowserFunction(widget.getBrowser(), "getConfirmCleanupMsg") { //$NON-NLS-1$
 			@Override
 			public Object function(Object[] arguments) {
-				return "Press OK to clean the Non-XHTML before pasting.\n\n"
-						+ "Press Cancel to paste text as it is (not recommended) or better use toolbar action \"Paste as plain text\"";
+				return "Press OK to clean the Non-XHTML before pasting.\n\n" + "Press Cancel to paste text as it is (not recommended) or better use toolbar action \"Paste as plain text\"";
 			}
 		};
 	}
@@ -226,16 +253,15 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget can not install beforePaste/afterPaste/beforeCommandExec listeners!")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget can not install beforePaste/afterPaste/beforeCommandExec listeners!")); //$NON-NLS-1$
 		}
 	}
 
 	/**
-	 * Listener that overrides the default double click event of CKEDITOR to open
-	 * links.
+	 * Listener that overrides the default double click event of CKEDITOR to open links.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createOpenLinkListener(final MDENebulaBasedRichTextWidget widget) {
 		new BrowserFunction(widget.getBrowser(), "openLinks") { //$NON-NLS-1$
@@ -256,8 +282,7 @@ public class ListenerInstaller {
 
 		scriptAddMenu.append("  CKEDITOR.instances.editor.on('doubleclick', function(event)");
 		scriptAddMenu.append("  {");
-		scriptAddMenu.append(
-				"    var element = CKEDITOR.plugins.link.getSelectedLink( CKEDITOR.currentInstance ) || event.data.element;");
+		scriptAddMenu.append("    var element = CKEDITOR.plugins.link.getSelectedLink( CKEDITOR.currentInstance ) || event.data.element;");
 		scriptAddMenu.append("    if (element!=undefined &&  element.is( 'a' ) ) {");
 		scriptAddMenu.append("      event.stop();");
 		scriptAddMenu.append("      openLinks(element.getAttribute('href'));");
@@ -268,10 +293,8 @@ public class ListenerInstaller {
 
 		scriptAddMenu.append("CKEDITOR.instances.editor.addCommand(\"openLink\", {");
 		scriptAddMenu.append("exec : function( editor ) {");
-		scriptAddMenu
-				.append("			var linkTag = editor.getSelection().getStartElement().getAscendant('a', true);");
-		scriptAddMenu
-				.append("          if (linkTag != null && linkTag.is('a')){ openLinks(linkTag.getAttribute('href'));}");
+		scriptAddMenu.append("			var linkTag = editor.getSelection().getStartElement().getAscendant('a', true);");
+		scriptAddMenu.append("          if (linkTag != null && linkTag.is('a')){ openLinks(linkTag.getAttribute('href'));}");
 		scriptAddMenu.append("    }});");
 		scriptAddMenu.append("	var openLink = {");
 		scriptAddMenu.append("   label : 'Open Link',");
@@ -293,34 +316,44 @@ public class ListenerInstaller {
 		scriptAddMenu.append("});");
 
 		if (!widget.executeScript(scriptAddMenu.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install the open link command")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install the open link command")); //$NON-NLS-1$
 		}
 	}
 
 	/**
 	 * Listener that saves the editor content when receiving a focus out event.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createSaveListener(final MDENebulaBasedRichTextWidget widget) {
 		new BrowserFunction(widget.getBrowser(), "saveContent") { //$NON-NLS-1$
 			@Override
 			public Object function(Object[] arguments) {
-				widget.saveContent();
+				if (Platform.OS_LINUX.equals(Platform.getOS())) {
+					Display.getCurrent().asyncExec(new Runnable() {
+
+						@Override
+						public void run() {
+							widget.saveContent();
+						}
+					});
+				} else {
+					widget.saveContent();
+				}
 				return null;
 			}
 		};
 	}
 
-  /**
-   * Inject java script that calls dedicated functions when the editor receives a focus out event.
-   * 
-   * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, focusOut() is called on
-   * 'blur' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
-   * specific method.
-   */
-  protected void installFocusOutListener(final MDENebulaBasedRichTextWidget widget) {
+	/**
+	 * Inject java script that calls dedicated functions when the editor receives a focus out event.
+	 * 
+	 * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, focusOut() is called on
+	 * 'blur' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
+	 * specific method.
+	 */
+	protected void installFocusOutListener(final MDENebulaBasedRichTextWidget widget) {
 		StringBuilder script = new StringBuilder();
 
 		script.append("CKEDITOR.instances.editor.on('blur', function () {");
@@ -328,15 +361,15 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install the save handler")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install the save handler")); //$NON-NLS-1$
 		}
 	}
 
 	/**
 	 * Listener that sends a PropertyChangeEvent when receiving a blur out event.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createChangeNotificationHandlerListener(final MDENebulaBasedRichTextWidget widget) {
 		new BrowserFunction(widget.getBrowser(), "changeHandler") { //$NON-NLS-1$
@@ -359,69 +392,85 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install the notification handler")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install the notification handler")); //$NON-NLS-1$
 		}
 	}
 
 	/**
-   * Listener that is called when the content of the editor changes.<br/>
-   * It temporarily saves the editor content when receiving the 'change' event the first time.
-   */
+	 * Listener that is called when the content of the editor changes.<br/>
+	 * It temporarily saves the editor content when receiving the 'change' event the first time.
+	 */
 	protected void createChangeContentListener(final MDENebulaBasedRichTextWidget widget) {
-    final boolean[] widgetSaveTriggeredByContentChangeDetection = { false };
+		final boolean[] widgetSaveTriggeredByContentChangeDetection = { false };
 
-    // if supp (resp. backspace) key is used at the end (resp. beginning) of the text, the 'change' event is emitted
-    // and the widget is saved. But in this case isDirtyStateUpdated should be still be false because there has been non
-    // change<br/>
-    // That's why we call setDirtyStateUpdated only if a model change has been effectively be done.
-    widget.addPropertyChangeListener(evt -> {
-      if (evt.getSource() == widget && AbstractMDERichTextWidget.WIDGET_SAVED_PROP.equals(evt.getPropertyName())) {
-        widget.setDirtyStateUpdated(widgetSaveTriggeredByContentChangeDetection[0]);
-      }
-    });
+		// if supp (resp. backspace) key is used at the end (resp. beginning) of the text, the 'change' event is emitted
+		// and the widget is saved. But in this case isDirtyStateUpdated should be still be false because there has been
+		// non
+		// change<br/>
+		// That's why we call setDirtyStateUpdated only if a model change has been effectively be done.
+		widget.addPropertyChangeListener(evt -> {
+			if (evt.getSource() == widget && AbstractMDERichTextWidget.WIDGET_SAVED_PROP.equals(evt.getPropertyName())) {
+				widget.setDirtyStateUpdated(widgetSaveTriggeredByContentChangeDetection[0]);
+			}
+		});
 
-    new BrowserFunction(widget.getBrowser(), "onChangeEvent") { //$NON-NLS-1$
-      @Override
-      public Object function(Object[] arguments) {
-        if (!widget.isDirtyStateUpdated()) {
-          // In some case, saveContent is called in a context where the model is persisted. In this context,
-          // setDirtyStateUpdated(false) need to be called so that saveContent is called at the next editor change.
-          // But, by design we can not ensure that.
-          // So we ensure that we prevent further saveContent only if the saveContent is triggered by the edition.
-          widgetSaveTriggeredByContentChangeDetection[0] = true;
-          widget.saveContent();
-          widgetSaveTriggeredByContentChangeDetection[0] = false;
-        }
-        return null;
-      }
-    };
+		new BrowserFunction(widget.getBrowser(), "onChangeEvent") { //$NON-NLS-1$
+			@Override
+			public Object function(Object[] arguments) {
+				if (Platform.OS_LINUX.equals(Platform.getOS())) {
+					Display.getCurrent().asyncExec(new Runnable() {
+
+						@Override
+						public void run() {
+							onChangeEvent(widget);
+						}
+					});
+				} else {
+					onChangeEvent(widget);
+				}
+				return null;
+			}
+
+			private void onChangeEvent(final MDENebulaBasedRichTextWidget widget) {
+				if (!widget.isDirtyStateUpdated()) {
+					// In some case, saveContent is called in a context where the model is persisted. In this context,
+					// setDirtyStateUpdated(false) need to be called so that saveContent is called at the next editor
+					// change.
+					// But, by design we can not ensure that.
+					// So we ensure that we prevent further saveContent only if the saveContent is triggered by the
+					// edition.
+					widgetSaveTriggeredByContentChangeDetection[0] = true;
+					widget.saveContent();
+					widgetSaveTriggeredByContentChangeDetection[0] = false;
+				}
+			}
+		};
 	}
 
-  /**
-   * Inject java script that calls dedicated functions when the editor receives a 'change' in event.
-   * 
-   * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, textModified() is called on
-   * 'change' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
-   * specific method.
-   */
-	 protected void installChangeContentListener(final MDENebulaBasedRichTextWidget widget) {
-	    StringBuilder script = new StringBuilder();
+	/**
+	 * Inject java script that calls dedicated functions when the editor receives a 'change' in event.
+	 * 
+	 * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, textModified() is called on
+	 * 'change' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
+	 * specific method.
+	 */
+	protected void installChangeContentListener(final MDENebulaBasedRichTextWidget widget) {
+		StringBuilder script = new StringBuilder();
 
-	    script.append("CKEDITOR.instances.editor.on('change', function () {");
-	    script.append("onChangeEvent();");
-	    script.append("});");
+		script.append("CKEDITOR.instances.editor.on('change', function () {");
+		script.append("onChangeEvent();");
+		script.append("});");
 
-	    if (!widget.executeScript(script.toString())) {
-	      Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-	          "Rich text widget cannot install onChangeEvent handler")); //$NON-NLS-1$
-	    }
-	  }
-	
+		if (!widget.executeScript(script.toString())) {
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install onChangeEvent handler")); //$NON-NLS-1$
+		}
+	}
+
 	/**
 	 * Listeners that resets the dirty state when receiving a 'focus' event.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createFocusEventListener(final MDENebulaBasedRichTextWidget widget) {
 		new BrowserFunction(widget.getBrowser(), "resetDirtyState") { //$NON-NLS-1$
@@ -434,14 +483,14 @@ public class ListenerInstaller {
 		};
 	}
 
-  /**
-   * Inject java script that calls dedicated functions when the editor receives a 'focus' in event.
-   * 
-   * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, focusIn() is called on
-   * 'focus' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
-   * specific method.
-   */
-  protected void installFocusInListener(final MDENebulaBasedRichTextWidget widget) {
+	/**
+	 * Inject java script that calls dedicated functions when the editor receives a 'focus' in event.
+	 * 
+	 * Note that, as defined in org\eclipse\nebula\widgets\richtext\resources\template.html, focusIn() is called on
+	 * 'focus' event but only the last BrowserFunction is called(not all registered). So it is preferable to have a
+	 * specific method.
+	 */
+	protected void installFocusInListener(final MDENebulaBasedRichTextWidget widget) {
 		StringBuilder script = new StringBuilder();
 
 		script.append("CKEDITOR.instances.editor.on('focus', function () {");
@@ -449,13 +498,13 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install resetDirtyState handler")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install resetDirtyState handler")); //$NON-NLS-1$
 		}
 	}
 
 	/**
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createDataReadyEventListener(final MDENebulaBasedRichTextWidget widget) {
 		new BrowserFunction(widget.getBrowser(), "notifyDataReady") { //$NON-NLS-1$
@@ -476,8 +525,7 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install dataReady handler")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install dataReady handler")); //$NON-NLS-1$
 		}
 	}
 
@@ -500,26 +548,23 @@ public class ListenerInstaller {
 		script.append("});");
 
 		if (!widget.executeScript(script.toString())) {
-			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID,
-					"Rich text widget cannot install setData handler")); //$NON-NLS-1$
+			Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, "Rich text widget cannot install setData handler")); //$NON-NLS-1$
 		}
 	}
 
 	/**
-	 * Register the widget as a listener for when workspace resources have been
-	 * saved.
+	 * Register the widget as a listener for when workspace resources have been saved.
 	 * 
-	 * @param widget the rich text widget.
+	 * @param widget
+	 *            the rich text widget.
 	 */
 	protected void createWorkspaceResourceSaveListener(MDERichTextWidget widget) {
-		IConfigurationElement[] contributions = Platform.getExtensionRegistry()
-				.getConfigurationElementsFor(MDERichTextEditor.SAVE_CALLBACK_EXTENSION_ID);
+		IConfigurationElement[] contributions = Platform.getExtensionRegistry().getConfigurationElementsFor(MDERichTextEditor.SAVE_CALLBACK_EXTENSION_ID);
 
 		if (contributions != null && contributions.length > 0) {
 			for (IConfigurationElement c : contributions) {
 				try {
-					MDERichTextEditorCallback callback = (MDERichTextEditorCallback) c
-							.createExecutableExtension(MDERichTextEditor.SAVE_CALLBACK_CLASS_ATTR);
+					MDERichTextEditorCallback callback = (MDERichTextEditorCallback) c.createExecutableExtension(MDERichTextEditor.SAVE_CALLBACK_CLASS_ATTR);
 					callback.registerWorkspaceResourceSaveListener(widget);
 				} catch (CoreException e) {
 					Status status = new Status(IStatus.ERROR, Activator.PLUGIN_ID, e.getMessage(), e);
