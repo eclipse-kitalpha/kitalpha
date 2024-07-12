@@ -17,6 +17,7 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IExecutionListener;
 import org.eclipse.core.commands.NotHandledException;
 import org.eclipse.core.runtime.Assert;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.nebula.widgets.richtext.RichTextEditorConfiguration;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IWorkbenchCommandConstants;
@@ -267,10 +268,12 @@ public class MDERichTextFactory {
 	protected void addEditorToolbarItems(MDENebulaBasedRichTextWidget widget) {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_SAVE, MDERichTextConstants.MDE_SAVE,
 				"Save editor content", MDERichTextConstants.MDE_SAVE_TOOLBAR, Constants.SAVE_IMAGE_ICON, new SaveContentHandler());
-
+		
+		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH,
 				"Refresh editor", MDERichTextConstants.MDE_REFRESH, Constants.REFRESH_IMAGE_ICON, new RefreshHandler());
-    
+		}
+		
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_CLEAN, 
 				MDERichTextConstants.MDE_CLEAN, MDERichTextConstants.MDE_CLEAN, 
 				MDERichTextConstants.MDE_CLEAN_TOOLBAR, Constants.CLEAR_ICON, new ClearContentHandler());
@@ -294,8 +297,11 @@ public class MDERichTextFactory {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_SAVE, MDERichTextConstants.MDE_SAVE, "Save editor",
 				MDERichTextConstants.MDE_SAVE_TOOLBAR, Constants.SAVE_IMAGE_ICON, new SaveContentHandler());
 
+		
+		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH,
-				"Refresh editor", MDERichTextConstants.MDE_REFRESH, Constants.REFRESH_IMAGE_ICON, new RefreshHandler());		
+				"Refresh editor", MDERichTextConstants.MDE_REFRESH, Constants.REFRESH_IMAGE_ICON, new RefreshHandler());
+		}
 		
 		addEditorToolbarItems(widget);
 	}
@@ -311,7 +317,11 @@ public class MDERichTextFactory {
 			configuration.initializeToolbarItem(MDERichTextConstants.MDE_ENABLE_EDITING_TOOLBAR, MDERichTextConstants.MDE_OPEN_EDITOR);
 		}
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_SAVE_TOOLBAR, MDERichTextConstants.MDE_SAVE);
+		
+		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH);
+		}
+		
 		configuration.initializeToolbarItem(MDERichTextConstants.STYLES_TOOLBAR);
 		configuration.initializeToolbarItem(MDERichTextConstants.CLIPBOARD_TOOLBAR);
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_CLEAN_TOOLBAR, MDERichTextConstants.MDE_CLEAN);
@@ -336,7 +346,9 @@ public class MDERichTextFactory {
 	protected MDERichTextFactory initializeMDEMinimalToolbar(){
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_ENABLE_EDITING_TOOLBAR, MDERichTextConstants.MDE_OPEN_EDITOR);
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_SAVE_TOOLBAR, MDERichTextConstants.MDE_SAVE);
-		configuration.initializeToolbarItem(MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH);
+		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
+		    configuration.initializeToolbarItem(MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH);
+		}
 		configuration.initializeToolbarItem(MDERichTextConstants.STYLES_TOOLBAR);
 		configuration.initializeToolbarItem(MDERichTextConstants.CLIPBOARD_TOOLBAR);
 		configuration.initializeToolbarItem(MDERichTextConstants.BASIC_STYLES_GROUP, 
