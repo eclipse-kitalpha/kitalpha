@@ -128,7 +128,7 @@ public class MDENebulaRichTextConfiguration extends RichTextEditorConfiguration 
 	
 	@Override
 	public void customizeToolbar() {
-		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (Platform.OS_LINUX.equals(Platform.getOS()) && !Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 			Display.getCurrent().asyncExec(new Runnable() {
 
 				@Override

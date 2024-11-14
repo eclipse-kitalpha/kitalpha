@@ -269,7 +269,7 @@ public class MDERichTextFactory {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_SAVE, MDERichTextConstants.MDE_SAVE,
 				"Save editor content", MDERichTextConstants.MDE_SAVE_TOOLBAR, Constants.SAVE_IMAGE_ICON, new SaveContentHandler());
 		
-		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (!Platform.OS_LINUX.equals(Platform.getOS()) || Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH,
 				"Refresh editor", MDERichTextConstants.MDE_REFRESH, Constants.REFRESH_IMAGE_ICON, new RefreshHandler());
 		}
@@ -298,7 +298,7 @@ public class MDERichTextFactory {
 				MDERichTextConstants.MDE_SAVE_TOOLBAR, Constants.SAVE_IMAGE_ICON, new SaveContentHandler());
 
 		
-		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (!Platform.OS_LINUX.equals(Platform.getOS()) || Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 		widget.addToolbarItem(widget, MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH,
 				"Refresh editor", MDERichTextConstants.MDE_REFRESH, Constants.REFRESH_IMAGE_ICON, new RefreshHandler());
 		}
@@ -318,7 +318,7 @@ public class MDERichTextFactory {
 		}
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_SAVE_TOOLBAR, MDERichTextConstants.MDE_SAVE);
 		
-		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (!Platform.OS_LINUX.equals(Platform.getOS()) || Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH);
 		}
 		
@@ -346,7 +346,7 @@ public class MDERichTextFactory {
 	protected MDERichTextFactory initializeMDEMinimalToolbar(){
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_ENABLE_EDITING_TOOLBAR, MDERichTextConstants.MDE_OPEN_EDITOR);
 		configuration.initializeToolbarItem(MDERichTextConstants.MDE_SAVE_TOOLBAR, MDERichTextConstants.MDE_SAVE);
-		if (!Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (!Platform.OS_LINUX.equals(Platform.getOS()) || Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 		    configuration.initializeToolbarItem(MDERichTextConstants.MDE_REFRESH, MDERichTextConstants.MDE_REFRESH);
 		}
 		configuration.initializeToolbarItem(MDERichTextConstants.STYLES_TOOLBAR);

@@ -43,7 +43,7 @@ public class MDEToolbarItem extends ToolbarButton {
 	
 	@Override
 	public final Object execute() {
-		if (Platform.OS_LINUX.equals(Platform.getOS())) {
+		if (Platform.OS_LINUX.equals(Platform.getOS()) && !Boolean.getBoolean("org.polarsys.kitalpha.richtext.webkit.gtk.compatibility.workaround.disable")) {
 			Display.getCurrent().asyncExec(new Runnable() {
 
 				@Override
