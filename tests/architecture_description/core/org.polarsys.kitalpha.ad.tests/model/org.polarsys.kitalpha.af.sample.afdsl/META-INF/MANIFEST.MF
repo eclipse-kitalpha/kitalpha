@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Component Sample Architecture Framework AFDSL Plugin
+Bundle-SymbolicName: org.polarsys.kitalpha.af.sample.afdsl;singleton:=true
+Bundle-Version: 7.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-Vendor: www.polarsys.org
+Require-Bundle: org.polarsys.kitalpha.resourcereuse

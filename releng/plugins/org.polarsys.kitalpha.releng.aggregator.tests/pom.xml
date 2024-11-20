@@ -41,6 +41,7 @@
 		<module>../../../emde/tests/org.polarsys.kitalpha.emde.tests</module>
 		<module>../../../architecture description/metadata/tests/org.polarsys.kitalpha.ad.metadata.tests</module>
 		<module>../../../architecture description/core/tests/org.polarsys.kitalpha.ad.viewpoint.tests</module>
+		<module>../../../tests/architecture_description/core/org.polarsys.kitalpha.ad.tests</module>
 		<module>../../../transposer/tests/plugins/junits/org.polarsys.kitalpha.transposer.junit.tests</module>
 		<module>../../../massactions/tests/plugins/org.polarsys.kitalpha.massactions.junit.tests</module>
 		<module>../../../sirius/tests/plugins/org.polarsys.kitalpha.sirius.rotativeimage.junit.tests</module>
