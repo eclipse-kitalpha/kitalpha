@@ -1,0 +1,14 @@
+<% 
+element = (EDataType)ctx.getValue(PatternContext.INJECTED_CONTEXT);
+String text = LabelProviderHelper.getText(element);
+%>
+
+<% if (text != null && !text.isEmpty()) { %>
+<h2>EDataType</h2>
+<%= text %>
+<br/>
+<ul>
+	<li>Name : <%= element.getName() %></li>
+	<li>Instance Class: <%= element.getInstanceClass().getCanonicalName() %></li>
+</ul>
+<%}%>

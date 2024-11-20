@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_992XkDCPEeaFuoOf0aDQ6Q
+Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_GJAM0C2rEea53PSN5pNRIg,_992XkDCPEeaFuoOf0aDQ6Q
 Element-Name: ecoreEmptyEpackagePage
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _6hzHcDCPEeaFuoOf0aDQ6Q
-Save-Time: 11/10/20, 2:23 PM
+Runtime-Version: 2.5.3.202205021448
+Save-Time: 8/18/22, 11:10 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,15 +20,17 @@ Replace All contributions to EPackage page content by empty contributions
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-menu "File/Restart" | click
-wait-until-eclipse-is-ready
+copy-file -source "workspace://fcore_emptyEpackage/DocGenExtensions.fcore" -destination "workspace://org.polarsys.kitalpha.doc.gen.ecore.extensions/egf/"
+
+get-view "Project Explorer" | key-type "F5"
+
 get-view "Project Explorer" | get-tree 
     | select "org.polarsys.kitalpha.doc.gen.ecore.extensions/egf/DocGenExtensions.fcore" | double-click
 with [get-editor "DocGenExtensions.fcore" | get-tree] {
     get-item "DocGenExtensions \\[Factory Component\\]" | click
     select "DocGenExtensions [Factory Component]" | get-menu "Run EGF Activity..." | click
 }
-wait -ms 10000
+wait -ms 20000
 get-view "Project Explorer" | get-tree | get-item "docgen/doc" | get-property childCount | equals 4 | verify-true
 get-view "Project Explorer" | get-tree | select "docgen/doc/output/ecore/ecore.html" | get-menu "Open With/Text Editor" 
     | click
