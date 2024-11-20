@@ -169,11 +169,9 @@ public final class EMDEHelper {
 	}
 
 	public static Collection<EClass> getExtendedElement(BasicDiagnostic basicDiagnostic, EClass eClass) {
-		Collection<EClass> eClasses = getExtendedElementEClasses(basicDiagnostic, eClass);
-		if (!eClasses.isEmpty()) {
-			return eClasses;
-		}
-		return getExtendedElementParentEClasses(basicDiagnostic, eClass);
+		Collection<EClass> eClasses = new UniqueEList<EClass>(getExtendedElementEClasses(basicDiagnostic, eClass));
+		eClasses.addAll(getExtendedElementParentEClasses(basicDiagnostic, eClass));
+		return eClasses;
 	}
 
 	public static Collection<EClass> getExtendedElementParentEClasses(BasicDiagnostic basicDiagnostic, EClass eClass) {
@@ -181,16 +179,25 @@ public final class EMDEHelper {
 		if ((eClass == null) || (eClass.eResource() == null)) {
 			return eClasses;
 		}
-		// Retrieve existing annotations, only the first member is analysed.
+		Collection<EClass> processedClasses = new UniqueEList<EClass>();
+		processedClasses.add(eClass);
+		return recursiveGetExtendedElementParentEClasses(basicDiagnostic, eClass, eClasses, processedClasses);		
+	}
+	
+	private static Collection<EClass> recursiveGetExtendedElementParentEClasses(BasicDiagnostic basicDiagnostic,EClass eClass, Collection<EClass> alreadyCollectedClasses, Collection<EClass> alreadyProcessedClasses) {
+		// Retrieve existing annotations
 		List<EClass> eSuperTypes = eClass.getESuperTypes();
 		if (!eSuperTypes.isEmpty()) {
-			eClasses.addAll(getExtendedElementEClasses(basicDiagnostic, eSuperTypes.get(0)));
-			// We only return the first parent who has available annotations.
-			if (eClasses.isEmpty()) {
-				return getExtendedElementParentEClasses(basicDiagnostic, eSuperTypes.get(0));
+			for(EClass eSuperType : eSuperTypes) {
+				if (!alreadyProcessedClasses.contains(eSuperType)) {
+					alreadyCollectedClasses.add(eSuperType);
+					alreadyProcessedClasses.add(eSuperType);
+					alreadyCollectedClasses.addAll(getExtendedElementEClasses(basicDiagnostic, eSuperType));
+					alreadyCollectedClasses.addAll(recursiveGetExtendedElementParentEClasses(basicDiagnostic, eSuperType, alreadyCollectedClasses,alreadyProcessedClasses));
+				}
 			}
 		}
-		return eClasses;
+		return alreadyCollectedClasses;
 	}
 
 	public static boolean isExtensibleElement(EClass object) {
