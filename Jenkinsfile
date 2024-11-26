@@ -5,6 +5,9 @@ pipeline {
 		maven 'apache-maven-latest'
 		jdk 'openjdk-jdk17-latest'
 	}
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+    }
 	environment {
 		BUILD_KEY = (github.isPullRequest() ? CHANGE_TARGET : BRANCH_NAME).replaceFirst(/^v/, '')
 	    JACOCO_VERSION = "0.8.10"
