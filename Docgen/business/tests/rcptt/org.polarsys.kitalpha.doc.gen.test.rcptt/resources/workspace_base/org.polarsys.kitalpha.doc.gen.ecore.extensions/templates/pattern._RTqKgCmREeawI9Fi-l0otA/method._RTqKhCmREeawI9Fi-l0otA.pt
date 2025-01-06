@@ -1,0 +1,2 @@
+EObject tmp = ((EObject)ctx.getValue(PatternContext.INJECTED_CONTEXT));
+return (tmp instanceof EClass) && !((EClass)tmp).getEAnnotations().isEmpty(); 
