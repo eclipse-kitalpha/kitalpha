@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -47,7 +47,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.jface.window.Window;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
@@ -56,7 +56,7 @@ import org.polarsys.kitalpha.ad.viewpoint.ui.Activator;
 import org.polarsys.kitalpha.ad.viewpoint.ui.Messages;
 
 public abstract class NewElementWizardPage extends NewTypeWizardPage {
-
+	
 	private final class LocalTypedElementSelectionValidator extends TypedElementSelectionValidator {
 		private LocalTypedElementSelectionValidator(Class<?>[] acceptedTypes, boolean allowMultipleSelection) {
 			super(acceptedTypes, allowMultipleSelection);
@@ -231,7 +231,7 @@ public abstract class NewElementWizardPage extends NewTypeWizardPage {
 				if (element instanceof IJavaProject) {
 					IJavaProject jproj = (IJavaProject) element;
 					try {
-						return jproj.getProject().hasNature(PDE.PLUGIN_NATURE);
+                        return jproj.getProject().hasNature(PluginProject.NATURE);
 					} catch (CoreException e) {
 						AD_Log.getDefault().logWarning(e); // just log, no UI in
 															// validation

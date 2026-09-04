@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -26,7 +26,7 @@ import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.pde.internal.core.ClasspathComputer;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 
 /**
  * @author Boubekeur Zendagui
@@ -58,7 +58,7 @@ public class ProjectsManager {
 	
 	private static void addNatures(IProject project, IProgressMonitor monitor) throws CoreException {
 		IProjectDescription description = project.getDescription();
-		String[] projectNatures = { /* DslVpProjectNature.NATURE_ID,*/ JavaCore.NATURE_ID, PDE.PLUGIN_NATURE};
+        String[] projectNatures = { /* DslVpProjectNature.NATURE_ID, */ JavaCore.NATURE_ID, PluginProject.NATURE };
 		description.setNatureIds(projectNatures);
 		project.setDescription(description, monitor);
 	}

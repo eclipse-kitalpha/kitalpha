@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -40,7 +40,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.pde.internal.core.ClasspathComputer;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
@@ -48,6 +48,7 @@ import org.eclipse.ui.PlatformUI;
 //A helper class to check whether an IFolder exists. If it doesn't, then create it.
 @SuppressWarnings("restriction")
 public class ResourceHelper {
+	
 	private static final String SUFFIX = ",\\";
 	private static final String BUILD_PROPERTIES = "build.properties";
 	private static final NullProgressMonitor NULL_PROGRESS_MONITOR = new NullProgressMonitor();
@@ -226,7 +227,7 @@ public class ResourceHelper {
 		project.create(null);
 		project.open(null);
 		if (pde) {
-			addNatureToProject(project, PDE.PLUGIN_NATURE, null);
+            addNatureToProject(project, PluginProject.NATURE, null);
 			setupJava(project, true);
 			IFolder metaFolder = project.getFolder("META-INF");
 			metaFolder.create(true, true, null);

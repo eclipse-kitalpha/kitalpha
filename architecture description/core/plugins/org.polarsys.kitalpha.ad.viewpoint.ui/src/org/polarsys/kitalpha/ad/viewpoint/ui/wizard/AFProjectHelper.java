@@ -33,7 +33,7 @@ import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.pde.internal.core.ClasspathComputer;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 import org.polarsys.kitalpha.ad.common.ProjectNature;
 import org.polarsys.kitalpha.ad.viewpoint.ui.Activator;
 
@@ -42,7 +42,7 @@ import org.polarsys.kitalpha.ad.viewpoint.ui.Activator;
  * 
  */
 public class AFProjectHelper {
-
+	
 	protected final Set<String> requiredBundles = new HashSet<String>();
 
 	public AFProjectHelper() {
@@ -123,7 +123,7 @@ public class AFProjectHelper {
 
 	protected void addNatures(IProject project, IProgressMonitor monitor) throws CoreException {
 		IProjectDescription description = project.getDescription();
-		String[] newNatures = { JavaCore.NATURE_ID, PDE.PLUGIN_NATURE, ProjectNature.VP_NATURE };
+        String[] newNatures = { JavaCore.NATURE_ID, PluginProject.NATURE, ProjectNature.VP_NATURE };
 		description.setNatureIds(newNatures);
 		project.setDescription(description, monitor);
 	}

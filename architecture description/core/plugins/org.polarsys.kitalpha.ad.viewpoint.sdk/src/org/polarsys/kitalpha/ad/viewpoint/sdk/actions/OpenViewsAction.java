@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuCreator;
@@ -25,7 +26,7 @@ import org.eclipse.pde.core.plugin.IPluginExtension;
 import org.eclipse.pde.core.plugin.IPluginModelBase;
 import org.eclipse.pde.core.plugin.IPluginObject;
 import org.eclipse.pde.core.plugin.PluginRegistry;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 import org.eclipse.pde.internal.core.plugin.PluginElement;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
@@ -44,7 +45,7 @@ import org.polarsys.kitalpha.ad.viewpoint.sdk.Messages;
 import org.polarsys.kitalpha.ad.viewpoint.sdk.manager.BundleManager;
 
 public class OpenViewsAction implements IMenuCreator, IObjectActionDelegate {
-
+	
 	private Shell shell;
 	private IProject project;
 	private IWorkbenchPage activePage;
@@ -146,7 +147,11 @@ public class OpenViewsAction implements IMenuCreator, IObjectActionDelegate {
 		} else {
 			action.setText("[Not loaded] Open viewpoint view");
 		}
-		action.setEnabled(project != null && project.isAccessible() && PDE.hasPluginNature(project) && BundleManager.INSTANCE.isManaged(project));
+		try {
+            action.setEnabled(project != null && project.isAccessible() && project.hasNature(PluginProject.NATURE) && BundleManager.INSTANCE.isManaged(project));
+		} catch (CoreException e) {
+			AD_Log.getDefault().logWarning(e);
+		}
 	}
 
 	private void initViewId(IPluginModelBase model) {

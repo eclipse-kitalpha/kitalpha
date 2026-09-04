@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2016, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2016, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.egf.core.producer.InvocationException;
 import org.eclipse.egf.ftask.producer.context.ITaskProductionContext;
 import org.eclipse.pde.internal.core.ICoreConstants;
-import org.eclipse.pde.internal.core.natures.PDE;
+import org.eclipse.pde.internal.core.natures.PluginProject;
 import org.eclipse.pde.internal.ui.util.PDEModelUtility;
 import org.osgi.framework.Constants;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper.pde.operation.BundleModelModification;
@@ -34,7 +34,7 @@ import org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper.pde.operation.Fe
 
 @SuppressWarnings("restriction")
 public class UpdateProjectVersionTask extends AbstractProjectUpdateTask {
-
+	
 	/** Lock object used to handle multiple invocation of version update on different projects **/
 	private static final Object bundleLock = new Object();
 	private static final Object featureLock = new Object();
@@ -67,7 +67,7 @@ public class UpdateProjectVersionTask extends AbstractProjectUpdateTask {
 		Assert.isNotNull(version, "Version contract should have a value"); //$NON-NLS-1$
 		boolean featureProject = false;
 		try {
-			featureProject = project.hasNature(PDE.FEATURE_NATURE);
+            featureProject = project.hasNature(PluginProject.NATURE);
 		} catch (CoreException e) {
 			throw new InvocationException(e);
 		}
