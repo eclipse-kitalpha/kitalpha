@@ -7,7 +7,6 @@ Bundle-Activator: defaultpackage.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.mtl,
  org.eclipse.emf.ecore,
  org.eclipse.sirius.diagram,
  org.polarsys.kitalpha.vp.componentsamplesafety.model,

@@ -6,7 +6,6 @@ Bundle-Version: 7.0.1.qualifier
 Bundle-Activator: org.polarsys.kitalpha.ecore.diagram.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.sirius.common.acceleo.mtl,
  org.eclipse.sirius,
  org.eclipse.sirius.ui,
  org.eclipse.sirius.diagram,

@@ -12,10 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.polarsys.kitalpha.report;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.polarsys.kitalpha.emde,
- org.polarsys.kitalpha.emde.extension,
+Export-Package: org.polarsys.kitalpha.emde.extension,
  org.polarsys.kitalpha.emde.extension.edit,
  org.polarsys.kitalpha.emde.extension.i18n,
  org.polarsys.kitalpha.emde.extension.preferences,
- org.polarsys.kitalpha.emde.extension.registry,
  org.polarsys.kitalpha.emde.extension.utils

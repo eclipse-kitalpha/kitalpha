@@ -196,8 +196,8 @@
 	<module>../../../richtext/plugins/org.polarsys.kitalpha.richtext.widget</module>
 	<module>../../../richtext/plugins/org.polarsys.kitalpha.richtext.widget.configurable</module>
 	<module>../../../richtext/plugins/org.polarsys.kitalpha.richtext.widget.configurable.preferences.core</module>
-	<module>../../../richtext/features/org.polarsys.kitalpha.richtext.widget.configurable.preferences.ui.feature</module>
 	<module>../../../richtext/plugins/org.polarsys.kitalpha.richtext.widget.configurable.preferences.ui</module>
+	<module>../../../richtext/features/org.polarsys.kitalpha.richtext.widget.configurable.preferences.ui.feature</module>
 	
 	<module>../../../sirius/features/org.polarsys.kitalpha.sirius.rotativeimage.feature</module>
 	<module>../../../sirius/features/org.polarsys.kitalpha.sirius.typeinterpreter.feature</module>
@@ -230,4 +230,3 @@
 	<module>../../../releng/plugins/org.polarsys.kitalpha.releng.runtime.updatesite</module>
 	</modules>
 </project>
-

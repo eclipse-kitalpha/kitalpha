@@ -7,7 +7,6 @@ Bundle-SymbolicName: org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.ui;singleton
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
- org.eclipse.xtext.generator;resolution:=optional,
  org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
@@ -38,4 +37,3 @@ Export-Package: org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text,
  org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.ui.impl,
  org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.ui.util,
  org.polarsys.kitalpha.ad.viewpoint.dsl.cs.text.validation
-

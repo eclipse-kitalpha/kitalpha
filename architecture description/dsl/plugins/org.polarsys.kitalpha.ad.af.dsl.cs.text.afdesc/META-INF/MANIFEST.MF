@@ -7,7 +7,6 @@ Bundle-SymbolicName: org.polarsys.kitalpha.ad.af.dsl.cs.text.afdesc;singleton:=t
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
- org.eclipse.xtext.generator;resolution:=optional,
  org.eclipse.xtext.common.types,
  org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,

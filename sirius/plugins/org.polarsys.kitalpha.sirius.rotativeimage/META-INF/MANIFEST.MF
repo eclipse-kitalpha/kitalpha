@@ -15,8 +15,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram,
  org.eclipse.sirius.diagram.ui,
  org.eclipse.osgi,
- org.apache.batik.dom,
- org.apache.batik.bridge,
  org.apache.batik.transcoder
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Eclipse-LazyStart: true

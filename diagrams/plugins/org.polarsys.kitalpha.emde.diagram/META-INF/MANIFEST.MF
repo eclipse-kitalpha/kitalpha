@@ -7,7 +7,6 @@ Bundle-Activator: org.polarsys.kitalpha.emde.diagram.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.mtl,
  org.eclipse.emf.ecore.edit,
  org.eclipse.emf.edit.ui,
  org.eclipse.emf.transaction,
