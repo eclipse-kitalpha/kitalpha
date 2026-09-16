@@ -1,0 +1,71 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: Viewpoint references with spaces in name
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _I_Wf0IsmEeu2R4FEQVZMXA
+Runtime-Version: 2.5.3.202205021448
+Save-Time: 8/17/22, 3:13 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.vpb.vpdsl/model/vpb.spec.vptext" 
+    | double-click
+with [get-editor "vpb.spec.vptext" | get-text-viewer] {
+    set-caret-pos 10 30
+    key-type Enter
+    key-type "M1+SPACE"
+    key-type Down -times 3
+    key-type Enter
+    type-text " "
+    key-type "M1+SPACE"
+    key-type Enter
+    set-caret-pos 11 20
+    key-type "M2+END"
+    key-type Del
+}
+with [get-editor "vpb.spec.vptext" | get-text-viewer] {
+    set-caret-pos 11 20
+    key-type "M1+SPACE"
+    set-caret-pos 11 20
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table | select vpA | click -default
+with [get-editor "vpb.spec.vptext" | get-text-viewer] {
+    set-caret-pos 14 2
+    key-type "M1+s"
+}
+get-view "Project Explorer" | get-tree | get-menu -path "New/Other..." | click
+with [get-window "Select a wizard"] {
+    get-editbox -after [get-label "Wizards:"] | set-text dsl
+    get-tree | select "Kitalpha/Architecture description/Architecture Framework DSL Project"
+    get-button "Next >" | click
+}
+with [get-window "New Architecture Framework"] {
+    get-list | select vpb vpA
+    get-editbox -after [get-label "Short name :"] | set-text afAB
+    get-button "Next >" | click
+    get-button Finish | click
+}
+with [get-editor "afab.aftext" | get-text-viewer] {
+    set-caret-pos 12 9
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table | select vpA | click -default
+with [get-editor "afab.aftext" | get-text-viewer] {
+    type-text ", "
+    key-type "M1+SPACE"
+}
+get-window -from "CompletionProposalPopup.createProposalSelector()" | get-table | select vpb | click -default
+get-editor "afab.aftext" | get-text-viewer | key-type "M1+s"
+with [get-window "Show View"] {
+    get-editbox | set-text pro
+    get-button Open | click
+}
+get-editor "afab.aftext" | get-text-viewer | set-caret-pos 12 17
+get-button "View Menu" -index 1 | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
