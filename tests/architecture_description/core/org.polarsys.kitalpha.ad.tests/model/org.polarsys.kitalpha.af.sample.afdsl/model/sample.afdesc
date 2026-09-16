@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<afdesc:ArchitectureFramework xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:afdesc="http://www.polarsys.org/kitalpha/ad/af/dsl/as/afdesc/1.0.0" name="sample" shortName="sample">
+  <af_viewpoints>
+  </af_viewpoints>
+  <owned_configuration>
+    <owned_element xsi:type="afdesc:GenerationConfiguration" rootProjectName="org.polarsys.kitalpha.af.sample"/>
+  </owned_configuration>
+</afdesc:ArchitectureFramework>
