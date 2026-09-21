@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Kitalpha Product" uid="org.polarsys.kitalpha.releng.sdk.product" id="org.polarsys.kitalpha.product.kitalpha" application="org.polarsys.kitalpha.product.application" version="7.0.1.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="Kitalpha Product" uid="org.polarsys.kitalpha.releng.sdk.product" id="org.polarsys.kitalpha.product.kitalpha" application="org.polarsys.kitalpha.product.application" version="7.0.1.qualifier" type="features" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/org.polarsys.kitalpha.product/icons/KitalphaAbout.png"/>
@@ -23,8 +23,17 @@ openFile
       </programArgsLin>
       <vmArgs>-Dosgi.requiredJavaVersion=17
 -Dosgi.dataAreaRequiresExplicitInit=true
+-Declipse.e4.inject.javax.warning=false
+-Declipse.platform.mergeTrust=true
+-Dsun.java.command=Kitalpha
+-Dpde.jreProfile=JavaSE-21
+-Dlogback.configurationFile=configuration/logback.xml
+--add-modules=ALL-SYSTEM
 -Xms512m
 -Xmx2048m
+-Dorg.slf4j.simpleLogger.defaultLogLevel=off
+-XX:+UseG1GC
+-XX:+UseStringDeduplication
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
