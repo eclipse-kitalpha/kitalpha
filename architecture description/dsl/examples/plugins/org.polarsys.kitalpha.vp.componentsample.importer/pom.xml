@@ -42,7 +42,9 @@
 						<configuration>
 <target>
 								<echo>Zip and Copy component projects in zips</echo>
-								<delete dir="${basedir}/zips/**"/>
+								<delete includeemptydirs="true">
+									<fileset dir="${basedir}/zips" includes="**"/>
+								</delete>
 								
 								<copy todir="pluginFolder">
 									<fileset dir="${basedir}/../org.polarsys.kitalpha.af.componentsamplearchitectureframework" />
