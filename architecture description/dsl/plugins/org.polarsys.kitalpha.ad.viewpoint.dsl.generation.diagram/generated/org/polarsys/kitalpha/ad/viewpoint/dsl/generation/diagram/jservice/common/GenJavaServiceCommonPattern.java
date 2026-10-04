@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.4.202309111303
+//Generated with EGF 1.6.5.qualifier
 package org.polarsys.kitalpha.ad.viewpoint.dsl.generation.diagram.jservice.common;
 
 import org.eclipse.egf.common.helper.*;
@@ -60,6 +60,7 @@ public class GenJavaServiceCommonPattern
 	protected final String TEXT_21 = NL + "}";
 	protected final String TEXT_22 = NL;
 	protected final String TEXT_23 = "}";
+	protected final String TEXT_24 = NL;
 
 	public GenJavaServiceCommonPattern() {
 		//Here is the constructor
@@ -87,8 +88,8 @@ public class GenJavaServiceCommonPattern
 			ctx.getReporter().executionFinished(OutputManager.computeExecutionOutput(ctx), ctx);
 		}
 
-		stringBuffer.append(TEXT_22);
-		stringBuffer.append(TEXT_22);
+		stringBuffer.append(TEXT_24);
+		stringBuffer.append(TEXT_24);
 		return stringBuffer.toString();
 	}
 

@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.4.202309111303
+//Generated with EGF 1.6.5.qualifier
 package org.polarsys.kitalpha.ad.viewpoint.dsl.generation.diagram.edge;
 
 import java.util.*;
@@ -47,7 +47,6 @@ public class EdgePattern
 	public EdgePattern() {
 		//Here is the constructor
 		// add initialisation of the pattern variables (declaration has been already done).
-
 	}
 
 	public void generate(Object argument) throws Exception {

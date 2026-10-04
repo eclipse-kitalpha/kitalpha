@@ -1,4 +1,4 @@
-//Generated with EGF 1.6.4.202309111303
+//Generated with EGF 1.6.5.qualifier
 package org.polarsys.kitalpha.ad.viewpoint.dsl.generation.diagram.jservice.diagrams;
 
 import java.util.*;
