@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %MODEL_DETACHMENT_UI
 Bundle-SymbolicName: org.polarsys.kitalpha.model.detachment.ui;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: org.polarsys.kitalpha.model.detachment.ui.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

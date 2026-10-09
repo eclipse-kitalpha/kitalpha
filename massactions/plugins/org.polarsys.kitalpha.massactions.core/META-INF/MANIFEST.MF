@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.kitalpha.massactions.core;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: org.polarsys.kitalpha.massactions.core.activator.MACoreActivator
 Require-Bundle: org.eclipse.nebula.widgets.nattable.core;visibility:=reexport,
  org.eclipse.nebula.widgets.nattable.extension.glazedlists;bundle-version="1.5.0";visibility:=reexport,

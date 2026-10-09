@@ -11,13 +11,9 @@
  *******************************************************************************/
 target "kitalpha" with source, requirements
 
-include "https://download.eclipse.org/sirius/updates/releases/7.4.1/2023-03/targets/modules/gmf-runtime-1.16.tpd"
+include "https://download.eclipse.org/sirius/updates/releases/7.5.0/2025-09/targets/modules/gmf-runtime-1.16.tpd"
 
-location Eclipse-2021-12 "https://download.eclipse.org/releases/2021-12/" {
-	org.eclipse.cvs.feature.group lazy
-}
-
-location Eclipse-2023-03 "https://download.eclipse.org/releases/2023-03/" {
+location Eclipse-2025-09 "https://download.eclipse.org/releases/2025-09/" {
 	org.eclipse.m2e.feature.feature.group lazy
 	org.eclipse.sdk.feature.group lazy
 	org.eclipse.egit.feature.group lazy
@@ -33,27 +29,18 @@ location Eclipse-2023-03 "https://download.eclipse.org/releases/2023-03/" {
 	org.eclipse.ocl.common.source lazy
 	org.eclipse.ocl.ecore.source lazy
 	org.eclipse.ocl.source lazy
-	org.eclipse.xtend.source lazy
-	org.eclipse.xpand.source lazy
-	org.eclipse.emf.mwe.core.source lazy
-	org.eclipse.xtend.typesystem.emf.source lazy
-	org.eclipse.emf.mwe.utils.source lazy
 	org.eclipse.emf.mwe2.runtime.source lazy
-	org.eclipse.e4.rcp.source.feature.group lazy
+	org.eclipse.e4.rcp.feature.group lazy
 	org.eclipse.ecf.core.feature.feature.group lazy
-	org.eclipse.ecf.core.ssl.feature.feature.group lazy
-	org.eclipse.ecf.filetransfer.feature.feature.group lazy
-	org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group lazy
-	org.eclipse.ecf.filetransfer.ssl.feature.feature.group lazy
 	org.eclipse.equinox.p2.core.feature.feature.group lazy
-	org.eclipse.equinox.p2.core.feature.source.feature.group lazy
-	org.eclipse.equinox.p2.extras.feature.source.feature.group lazy
-	org.eclipse.equinox.p2.rcp.feature.source.feature.group lazy
-	org.eclipse.equinox.p2.user.ui.source.feature.group lazy
+	org.eclipse.equinox.p2.extras.feature.feature.group lazy
+	org.eclipse.equinox.p2.rcp.feature.feature.group lazy
+	org.eclipse.equinox.p2.user.ui.feature.group lazy
 	org.eclipse.help.source lazy
 	org.eclipse.jdt.source.feature.group lazy
 	org.eclipse.jgit lazy
-	org.eclipse.ocl.all.feature.group lazy
+	org.eclipse.ocl.feature.group lazy
+	org.eclipse.ocl.uml.feature.group lazy
 	org.eclipse.pde.source.feature.group lazy
 	org.eclipse.platform.source lazy
 	org.eclipse.rcp.source.feature.group lazy
@@ -66,22 +53,16 @@ location Eclipse-2023-03 "https://download.eclipse.org/releases/2023-03/" {
 	org.eclipse.xsd.sdk.feature.group lazy
 	org.eclipse.xsd.source lazy
 	org.eclipse.xtend.sdk.feature.group lazy
-	org.eclipse.xtend lazy
-	org.eclipse.xtend.typesystem.emf lazy
 	org.eclipse.xtext.docs.feature.group lazy
-	org.eclipse.xpand lazy
 	org.eclipse.xtext.ui.source lazy
 	org.eclipse.xtext.xbase.lib.source lazy
 	org.eclipse.xtext.xbase.source lazy
 	org.eclipse.xtext.xtext.ui.source lazy
-	org.eclipse.xtext.generator lazy
-	org.eclipse.emf.ecoretools.sdk.feature.group lazy
 	org.eclipse.emf.ecoretools.design.feature.group lazy
 	org.eclipse.emf.sdk.feature.group lazy
 	org.eclipse.emf.cdo.feature.group lazy
-	org.eclipse.collections.feature.source.feature.group lazy
 	org.apache.commons.lang lazy
-	javax.xml  lazy
+	javax.xml.jre lazy
 	com.sun.xml.bind lazy
 	org.apache.xml.resolver lazy
 }
@@ -96,31 +77,20 @@ location acceleo "https://download.eclipse.org/acceleo/updates/releases/3.7/" {
 	org.eclipse.acceleo.doc [3.7.11,3.7.12)
 }
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/7.4.1/2023-03" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.5.0/2025-09/" {
 	org.eclipse.sirius.doc.feature.feature.group lazy
     org.eclipse.sirius.runtime.source.feature.group lazy
-    org.eclipse.sirius.runtime.acceleo.feature.group lazy
-    org.eclipse.sirius.runtime.acceleo.source.feature.group lazy
-	
 	org.eclipse.sirius.aql.feature.group lazy
 	org.eclipse.sirius.runtime.aql.source.feature.group lazy
-	org.eclipse.sirius.runtime.ide.eef.source.feature.group lazy
     org.eclipse.sirius.runtime.ide.ui.source.feature.group lazy
-    org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group lazy
-    org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group lazy
     org.eclipse.sirius.runtime.ide.xtext.source.feature.group lazy
-    org.eclipse.sirius.runtime.ocl.feature.group lazy
-    org.eclipse.sirius.runtime.ocl.source.feature.group lazy
     org.eclipse.sirius.specifier.ide.ui.feature.group lazy
     org.eclipse.sirius.specifier.ide.ui.source.feature.group lazy
-    org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group lazy
-    org.eclipse.sirius.specifier.ide.ui.acceleo.source.feature.group lazy
-	org.eclipse.acceleo.query.source.feature.group
-	
+	org.eclipse.sirius.specifier.ide.ui.aql.feature.group lazy
+	org.eclipse.sirius.specifier.ide.ui.aql.source.feature.group lazy
 	org.eclipse.sirius.interpreter.feature.feature.group lazy
 	org.eclipse.sirius.properties.feature.feature.group lazy
 	org.eclipse.sirius.runtime.aql.feature.group lazy
-	org.eclipse.sirius.runtime.ide.eef.feature.group lazy
 	org.eclipse.sirius.runtime.ide.ui.feature.group lazy
 	org.eclipse.sirius.runtime.ide.xtext.feature.group lazy
 	org.eclipse.sirius.runtime.feature.group lazy
@@ -128,6 +98,14 @@ location sirius "https://download.eclipse.org/sirius/updates/releases/7.4.1/2023
 	org.eclipse.sirius.specifier.properties.feature.feature.group lazy
 	org.eclipse.sirius.specifier.feature.group lazy
 	org.eclipse.sirius.tests.junit.support
+}
+
+location Acceleo_4.2.2_AQL_8.1.2 "https://download.eclipse.org/acceleo/updates/releases/4.2/R202603201315/" {
+	org.antlr.antlr4-runtime lazy
+}
+
+location EMF-Query-2022-08 "https://download.eclipse.org/modeling/emf/query/updates/releases/R202208101410/" {
+	org.eclipse.emf.query.feature.group lazy
 }
 
 location EMF-DiffMerge "https://download.eclipse.org/diffmerge/releases/0.15.0/emf-diffmerge-site/" {
@@ -164,7 +142,7 @@ location amalgam "https://download.eclipse.org/modeling/amalgam/updates/releases
 	org.eclipse.amalgam.explorer.contextual.core.source.feature.group lazy
 }
 
-location EGFSdk "https://download.eclipse.org/egf/updates/1.6.4/2023-03/" {
+location EGFSdk "https://download.eclipse.org/egf/nightly/PR-237-11/" {
 	org.eclipse.egf.sdk.feature.feature.group lazy
 	org.eclipse.egf.sdk.feature.source.feature.group lazy
 }

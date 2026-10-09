@@ -2,12 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.polarsys.kitalpha.vp.componentsamplequalityassessment.design
 Bundle-SymbolicName: org.polarsys.kitalpha.vp.componentsamplequalityassessment.design;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: defaultpackage.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.mtl,
  org.eclipse.emf.ecore,
  org.eclipse.sirius.diagram,
  org.polarsys.kitalpha.vp.componentsamplequalityassessment.model,

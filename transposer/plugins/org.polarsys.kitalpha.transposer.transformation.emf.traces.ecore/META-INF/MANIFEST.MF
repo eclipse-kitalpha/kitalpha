@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.kitalpha.transposer.transformation.emf.traces.ecore
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Require-Bundle: org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-Localization: plugin

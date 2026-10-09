@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.kitalpha.emde.model;singleton:=true
 Automatic-Module-Name: org.polarsys.kitalpha.emde.model
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.kitalpha.emde.model.EmdeModelPlugin$Implementation
 Bundle-Vendor: %providerName

@@ -3,5 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-SymbolicName: org.polarsys.kitalpha.ad.integration.sirius.egf;singleton:=true

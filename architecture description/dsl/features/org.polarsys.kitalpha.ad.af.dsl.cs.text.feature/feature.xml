@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.ad.af.dsl.cs.text.feature"
       label="Architecture Framework Textual Dsl Feature"
-      version="7.0.1.qualifier">
+      version="7.1.0.qualifier">
 
    <description>
       %description

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-name
 Bundle-SymbolicName: org.polarsys.kitalpha.richtext.widget.doc;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Vendor: %Bundle-vendor
 Require-Bundle: org.eclipse.help
 Bundle-Localization: OSGI-INF/l10n/bundle

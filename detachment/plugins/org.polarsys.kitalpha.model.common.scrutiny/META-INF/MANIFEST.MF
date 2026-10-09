@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %MODEL_SCRUTINY_NAME
 Bundle-SymbolicName: org.polarsys.kitalpha.model.common.scrutiny;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: org.polarsys.kitalpha.model.common.scrutiny.Activator
 Bundle-Vendor: %VENDOR
 Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,

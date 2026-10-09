@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.releng.eclipse.feature"
       label="%featureName"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -77,10 +77,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.cvs"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.draw2d"
          version="0.0.0"/>
 
@@ -94,18 +90,6 @@
 
    <includes
          id="org.eclipse.ecf.core.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.core.ssl.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.filetransfer.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ecf.filetransfer.ssl.feature"
          version="0.0.0"/>
 
    <includes
@@ -202,10 +186,6 @@
 
    <includes
          id="org.eclipse.emf.ecoretools.design"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.ecoretools.sdk"
          version="0.0.0"/>
 
    <includes
@@ -341,10 +321,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.ocl.all"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.pde"
          version="0.0.0"/>
 
@@ -373,27 +349,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.runtime.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.acceleo.source"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.sirius.runtime.aql"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.sirius.runtime.aql.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.eef"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.eef.source"
          version="0.0.0"/>
 
    <includes
@@ -405,27 +365,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.runtime.ide.ui.acceleo"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ide.ui.acceleo.source"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.sirius.runtime.ide.xtext"
          version="0.0.0"/>
 
    <includes
          id="org.eclipse.sirius.runtime.ide.xtext.source"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ocl"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.sirius.runtime.ocl.source"
          version="0.0.0"/>
 
    <includes
@@ -437,11 +381,11 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.specifier.ide.ui.acceleo"
+         id="org.eclipse.sirius.specifier.ide.ui.aql"
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.sirius.specifier.ide.ui.acceleo.source"
+         id="org.eclipse.sirius.specifier.ide.ui.aql.source"
          version="0.0.0"/>
 
    <includes
@@ -596,130 +540,64 @@
          id="org.eclipse.emf.diffmerge.egit.feature.source"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.ocl"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ocl.uml"
+         version="0.0.0"/>
+
    <plugin
          id="org.eclipse.ocl.ecore"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.ocl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="com.google.guava"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.ocl.common"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.ocl.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="lpg.runtime.java"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="com.google.inject"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.emf.validation.ocl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.xtend"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.xpand"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.mwe.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.xtend.typesystem.emf"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.emf.mwe.utils"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.apache.commons.cli"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.emf.mwe2.runtime"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.acceleo.query"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.antlr.runtime"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.acceleo.annotations"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+         version="0.0.0"/>
 
 </feature>

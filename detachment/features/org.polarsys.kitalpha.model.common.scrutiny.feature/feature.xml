@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.model.common.scrutiny.feature"
       label="%MODEL_SECRUTINY_FEATRE_NAME"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>

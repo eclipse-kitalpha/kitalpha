@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.sdk.feature"
       label="%featureName"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName"
       plugin="org.polarsys.kitalpha.product">
 
@@ -30,19 +30,19 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.runtime.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.sdk.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.ta.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.dsl.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.vp.componentsample.example.installer.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.representation.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.doc.gen.business.ecore.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.emde.sdk.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.cadence.examples.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.composer.examples.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.composer.componentsample.installer.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.transposer.examples.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.transposer.componentsample.installer.feature" version="7.0.1.qualifier"/>
+      <import feature="org.polarsys.kitalpha.runtime.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.sdk.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.ta.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.dsl.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.vp.componentsample.example.installer.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.representation.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.doc.gen.business.ecore.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.emde.sdk.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.cadence.examples.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.composer.examples.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.composer.componentsample.installer.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.transposer.examples.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.transposer.componentsample.installer.feature" version="7.1.0.qualifier"/>
    </requires>
 
 </feature>

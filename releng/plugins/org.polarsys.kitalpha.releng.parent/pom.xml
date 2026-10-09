@@ -23,7 +23,7 @@
 
 	<groupId>org.polarsys</groupId>
 	<artifactId>org.polarsys.kitalpha</artifactId>
-	<version>7.0.1-SNAPSHOT</version>
+	<version>7.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -40,7 +40,7 @@
 	<properties>
 		<tycho-version>4.0.13</tycho-version>
 		<tycho-extras-version>4.0.13</tycho-extras-version>
-		<platform-version-name>oxygen</platform-version-name>
+		<platform-version-name>2025-09</platform-version-name>
 		<tycho.scmUrl>scm:git:https://git.polarsys.org/r/kitalpha/kitalpha</tycho.scmUrl>
 		<tycho.surefire.useUIHarness>false</tycho.surefire.useUIHarness>
 		
@@ -49,6 +49,7 @@
 		<coverage.skip>false</coverage.skip>
 		
 		<sonar.jacoco.release>0.8.12</sonar.jacoco.release>
+		<sonar-version>5.8.0.7211</sonar-version>
 		
 		<rcptt-maven-version>2.5.5</rcptt-maven-version>
 		
@@ -127,6 +128,7 @@
 					</plugin>
 				</plugins>
 			</build>
+
 			<pluginRepositories>
 				<pluginRepository>
 					<id>cbi</id>
@@ -154,24 +156,22 @@
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
-			<pluginRepositories>
-					<pluginRepository>
-						<id>rcptt-releases</id>
-						<name>RCPTT Maven repository</name>
-						<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
-					</pluginRepository>
-					<pluginRepository>
-						<id>rcptt-snapshots</id>
-						<name>RCPTT Maven Snapshots repository</name>
-						<snapshots>
-							<updatePolicy>always</updatePolicy>
-						</snapshots>
-						<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
-					</pluginRepository>
-			</pluginRepositories>
 			<modules>
-				<module>../org.polarsys.kitalpha.releng.aggregator.tests.rcptt</module>
-			</modules>			
+				<!-- Test RCPTT -->
+				<!-- module>../../../architecture description/dsl/examples/tests/rcptt/org.polarsys.kitalpha.activityexplorer.test.rcptt</module-->
+				
+				<module>../../../tests/architecture_description/core/org.polarsys.kitalpha.ad.core.rcptt</module>
+				<module>../../../tests/resource_reuse/org.polarsys.kitalpha.resourcereuse.emfscheme.test.rcptt</module>
+				<module>../../../Docgen/business/tests/rcptt/org.polarsys.kitalpha.doc.gen.test.rcptt</module>
+				<module>../../../Docgen/business/tests/rcptt/org.polarsys.kitalpha.doc.gen.business.ecore.test.rcptt</module>
+				<module>../../../detachment/tests/rcptt/org.polarsys.kitalpha.detachment.tests.rcptt</module>
+				<module>../../../tests/architecture_description/dsl/org.polarsys.kitalpha.ad.viewpoint.test.rcptt</module>
+				<module>../../../tests/architecture_description/core/org.polarsys.kitalpha.ad.rcptt</module>
+				<module>../../../common/tests/org.polarsys.kitalpha.common.rcptt</module>
+				<module>../../../emde/tests/org.polarsys.kitalpha.emde.rcptt</module>
+				<module>../../../transposer/tests/plugins/rcptt/org.polarsys.kitalpha.transposer.rcptt.tests</module>
+				 
+			</modules>
 		</profile>
 		<profile>
 			<id>targetPlatform</id>
@@ -205,17 +205,22 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>${sonar-version}</version>
+			</plugin>
+			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
 					<targetDefinitionIncludeSource>force</targetDefinitionIncludeSource>
-					<executionEnvironment>JavaSE-17</executionEnvironment>
+					<executionEnvironment>JavaSE-21</executionEnvironment>
 					<target>
 						<artifact>
 							<groupId>org.polarsys</groupId>
 							<artifactId>org.polarsys.kitalpha</artifactId>
-							<version>7.0.1-SNAPSHOT</version>
+							<version>7.1.0-SNAPSHOT</version>
 							<classifier>../org.polarsys.kitalpha.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
@@ -336,6 +341,11 @@
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>3.2.0</version>
 				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>3.6.1</version>
+				</plugin>
 				<!-- Exclude pom.xml and pom.properties from generated archive (see http://maven.apache.org/shared/maven-archiver/) -->
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
@@ -390,4 +400,19 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>rcptt-releases</id>
+			<name>RCPTT Maven repository</name>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rcptt-snapshots</id>
+			<name>RCPTT Maven Snapshots repository</name>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

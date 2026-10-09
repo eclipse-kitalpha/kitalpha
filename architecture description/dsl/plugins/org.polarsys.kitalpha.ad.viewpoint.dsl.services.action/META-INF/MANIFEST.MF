@@ -3,7 +3,7 @@ Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: org.polarsys.kitalpha.ad.viewpoint.dsl.services.action;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: org.polarsys.kitalpha.ad.viewpoint.dsl.services.action.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.ad.feature"
       label="Kitalpha AD Feature"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -29,10 +29,10 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.report.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.common.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.resourcereuse.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.metadata.feature" version="7.0.1.qualifier"/>
+      <import feature="org.polarsys.kitalpha.report.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.common.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.resourcereuse.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.metadata.feature" version="7.1.0.qualifier"/>
    </requires>
 
    <plugin

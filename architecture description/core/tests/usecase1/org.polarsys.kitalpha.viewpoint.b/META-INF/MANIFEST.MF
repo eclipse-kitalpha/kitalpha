@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.polarsys.kitalpha.viewpoint.b
 Bundle-SymbolicName: org.polarsys.kitalpha.viewpoint.b;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.polarsys.kitalpha.ad.viewpoint.ui,
  B;bundle-version="0.1.0",

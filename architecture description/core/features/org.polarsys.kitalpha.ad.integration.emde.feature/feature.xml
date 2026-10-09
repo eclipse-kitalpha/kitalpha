@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.ad.integration.emde.feature"
       label="Kitalpha AD eMDE Integration Feature"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -29,8 +29,8 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.emde.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.feature" version="7.0.1.qualifier"/>
+      <import feature="org.polarsys.kitalpha.emde.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.feature" version="7.1.0.qualifier"/>
    </requires>
 
    <plugin
