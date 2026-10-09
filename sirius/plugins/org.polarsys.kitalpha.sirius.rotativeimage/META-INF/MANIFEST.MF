@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.kitalpha.sirius.rotativeimage;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Activator: org.polarsys.kitalpha.sirius.rotativeimage.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
@@ -15,9 +15,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.diagram,
  org.eclipse.sirius.diagram.ui,
  org.eclipse.osgi,
- org.apache.batik.dom,
- org.apache.batik.bridge,
- org.apache.batik.transcoder
+ org.apache.batik.transcoder;bundle-version="1.19.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Eclipse-LazyStart: true
 Export-Package: org.polarsys.kitalpha.sirius.rotativeimage,

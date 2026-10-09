@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Kitalpha Product" uid="org.polarsys.kitalpha.releng.sdk.product" id="org.polarsys.kitalpha.product.kitalpha" application="org.polarsys.kitalpha.product.application" version="7.0.1.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="Kitalpha Product" uid="org.polarsys.kitalpha.releng.sdk.product" id="org.polarsys.kitalpha.product.kitalpha" application="org.polarsys.kitalpha.product.application" version="7.1.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="/org.polarsys.kitalpha.product/icons/KitalphaAbout.png"/>

@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.ad.af.dsl.as.feature"
       label="Architecture framework dsl abstract description feature"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description url="http://www.example.com/description">

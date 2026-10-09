@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %BundleName
 Bundle-SymbolicName: org.polarsys.kitalpha.ad.viewpoint.dsl.generation.conf.doc;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.polarsys.kitalpha.ad.viewpoint.dsl.generation.conf.doc.model.docGenConfiguration.provider.DocGenConfigurationEditPlugin$Implementation
 Require-Bundle: org.eclipse.ui,

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.kitalpha.composer.examples.extended.ecorex.gen.generator;singleton=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.core.runtime,

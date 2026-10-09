@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.ad.dsl.feature"
       label="Kitalpha AD DSL feature"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>

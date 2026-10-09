@@ -1,162 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.rules.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.rules.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.rules.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.rules.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.representation.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.representation.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.representation.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.representation.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.af.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.af.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.af.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.af.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.representation.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafetypattern.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.representation.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplesafety.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplesafety.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.representation.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsamplequalityassessment.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.representation.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleperformance.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleperformance.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsampleframework.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsampleframework.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.rules.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.rules.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.rules.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.rules.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.representation.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.representation.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.representation.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.representation.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.af.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.af.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.af.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.af.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.af.componentsamplearchitectureframework.feature.source" version="7.1.0.qualifier">
       <category name="SampleComponentSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.composer.componentsample.installer.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.composer.componentsample.installer.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.composer.componentsample.installer.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.composer.componentsample.installer.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.transposer.componentsample.installer.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.transposer.componentsample.installer.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.transposer.componentsample.installer.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.transposer.componentsample.installer.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.installer.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.vp.componentsample.example.installer.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.vp.componentsample.example.installer.feature" version="7.1.0.qualifier">
       <category name="SampleComponent"/>
    </feature>
    <category-def name="SampleComponent" label="SampleComponent"/>

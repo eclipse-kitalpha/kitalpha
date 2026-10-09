@@ -23,7 +23,7 @@
 
 	<groupId>org.polarsys</groupId>
 	<artifactId>org.polarsys.kitalpha</artifactId>
-	<version>7.0.1-SNAPSHOT</version>
+	<version>7.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -154,33 +154,22 @@
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
-			<pluginRepositories>
-					<pluginRepository>
-						<id>rcptt-releases</id>
-						<name>RCPTT Maven repository</name>
-						<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
-					</pluginRepository>
-					<pluginRepository>
-						<id>rcptt-snapshots</id>
-						<name>RCPTT Maven Snapshots repository</name>
-						<snapshots>
-							<updatePolicy>always</updatePolicy>
-						</snapshots>
-						<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
-					</pluginRepository>
-			</pluginRepositories>
 			<modules>
-				<module>../org.polarsys.kitalpha.releng.aggregator.tests.rcptt</module>
-			</modules>			
-		</profile>
-		<profile>
-			<id>targetPlatform</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<modules>
-				<module>../org.polarsys.kitalpha.releng.targets</module>
-			</modules>	
+				<!-- Test RCPTT -->
+				<!-- module>../../../architecture description/dsl/examples/tests/rcptt/org.polarsys.kitalpha.activityexplorer.test.rcptt</module-->
+				
+				<module>../../../tests/architecture_description/core/org.polarsys.kitalpha.ad.core.rcptt</module>
+				<module>../../../tests/resource_reuse/org.polarsys.kitalpha.resourcereuse.emfscheme.test.rcptt</module>
+				<module>../../../Docgen/business/tests/rcptt/org.polarsys.kitalpha.doc.gen.test.rcptt</module>
+				<module>../../../Docgen/business/tests/rcptt/org.polarsys.kitalpha.doc.gen.business.ecore.test.rcptt</module>
+				<module>../../../detachment/tests/rcptt/org.polarsys.kitalpha.detachment.tests.rcptt</module>
+				<module>../../../tests/architecture_description/dsl/org.polarsys.kitalpha.ad.viewpoint.test.rcptt</module>
+				<module>../../../tests/architecture_description/core/org.polarsys.kitalpha.ad.rcptt</module>
+				<module>../../../common/tests/org.polarsys.kitalpha.common.rcptt</module>
+				<module>../../../emde/tests/org.polarsys.kitalpha.emde.rcptt</module>
+				<module>../../../transposer/tests/plugins/rcptt/org.polarsys.kitalpha.transposer.rcptt.tests</module>
+				 
+			</modules>
 		</profile>
 	</profiles>
 	<build>
@@ -215,7 +204,7 @@
 						<artifact>
 							<groupId>org.polarsys</groupId>
 							<artifactId>org.polarsys.kitalpha</artifactId>
-							<version>7.0.1-SNAPSHOT</version>
+							<version>7.1.0-SNAPSHOT</version>
 							<classifier>../org.polarsys.kitalpha.releng.targets/${target-platform-name}</classifier>
 						</artifact>
 					</target>
@@ -390,4 +379,19 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>rcptt-releases</id>
+			<name>RCPTT Maven repository</name>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rcptt-snapshots</id>
+			<name>RCPTT Maven Snapshots repository</name>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>

@@ -13,7 +13,7 @@
 <feature
       id="org.polarsys.kitalpha.runtime.feature"
       label="%featureName"
-      version="7.0.1.qualifier"
+      version="7.1.0.qualifier"
       provider-name="%providerName">
 
    <description>
@@ -29,27 +29,27 @@
    </license>
 
    <requires>
-      <import feature="org.polarsys.kitalpha.emde.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.emde.ui.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.emde.explorer.contextual.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.composer.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.transposer.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.cadence.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.accuracy.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.resourcereuse.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.resourcereuse.ui.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.resourcereuse.emfscheme.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.model.detachment.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.report.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.report.ui.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.ad.runtime.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.doc.gen.business.core.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.patterns.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.richtext.widget.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.doc.feature" version="7.0.1.qualifier"/>
-      <import feature="org.polarsys.kitalpha.sirius.rotativeimage.feature" version="7.0.1.qualifier"/>
+      <import feature="org.polarsys.kitalpha.emde.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.emde.ui.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.emde.explorer.contextual.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.composer.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.transposer.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.cadence.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.accuracy.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.resourcereuse.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.resourcereuse.ui.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.resourcereuse.emfscheme.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.resourcereuse.emfscheme.ui.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.model.detachment.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.model.detachment.contrib.viewpoints.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.report.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.report.ui.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.ad.runtime.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.doc.gen.business.core.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.patterns.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.richtext.widget.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.doc.feature" version="7.1.0.qualifier"/>
+      <import feature="org.polarsys.kitalpha.sirius.rotativeimage.feature" version="7.1.0.qualifier"/>
    </requires>
 
 </feature>

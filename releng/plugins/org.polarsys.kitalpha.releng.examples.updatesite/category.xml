@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.polarsys.kitalpha.cadence.examples.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.cadence.examples.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.cadence.examples.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.cadence.examples.feature" version="7.1.0.qualifier">
       <category name="Example"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.composer.examples.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.composer.examples.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.composer.examples.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.composer.examples.feature" version="7.1.0.qualifier">
       <category name="Example"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.transposer.examples.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.transposer.examples.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.transposer.examples.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.transposer.examples.feature" version="7.1.0.qualifier">
       <category name="Example"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature" version="7.1.0.qualifier">
       <category name="Example"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.cadence.examples.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.cadence.examples.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.cadence.examples.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.cadence.examples.feature.source" version="7.1.0.qualifier">
       <category name="ExampleSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.composer.examples.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.composer.examples.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.composer.examples.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.composer.examples.feature.source" version="7.1.0.qualifier">
       <category name="ExampleSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.transposer.examples.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.transposer.examples.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.transposer.examples.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.transposer.examples.feature.source" version="7.1.0.qualifier">
       <category name="ExampleSource"/>
    </feature>
-   <feature url="features/org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature.source_7.0.1.qualifier.jar" id="org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature.source" version="7.0.1.qualifier">
+   <feature url="features/org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature.source_7.1.0.qualifier.jar" id="org.polarsys.kitalpha.explorer.contextual.examples.ecore.feature.source" version="7.1.0.qualifier">
       <category name="ExampleSource"/>
    </feature>
    <category-def name="Example" label="Example"/>
