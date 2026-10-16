@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.polarsys</groupId>
+    <artifactId>org.polarsys.kitalpha</artifactId>
+    <version>7.1.0-SNAPSHOT</version>
+    <relativePath>../../../../releng/plugins/org.polarsys.kitalpha.releng.parent/pom.xml</relativePath>
+  </parent>
+  <artifactId>org.polarsys.kitalpha.massactions.junit.tests</artifactId>
+  <packaging>eclipse-test-plugin</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-surefire-plugin</artifactId>
+        <configuration>
+          <useUIHarness>true</useUIHarness>
+          <bundleStartLevel>
+            <bundle>
+              <id>org.apache.aries.spifly.dynamic.bundle</id>
+              <level>2</level>
+              <autoStart>true</autoStart>
+            </bundle>
+          </bundleStartLevel>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

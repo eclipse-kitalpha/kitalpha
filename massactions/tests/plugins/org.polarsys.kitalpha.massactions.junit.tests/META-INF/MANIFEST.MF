@@ -13,7 +13,9 @@ Require-Bundle: org.junit;bundle-version="4.12.0",
  org.polarsys.kitalpha.massactions,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.eclipse.collections.impl;bundle-version="13.0.0",
+ org.eclipse.collections.api;bundle-version="13.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: TestModel,
  TestModel.impl,

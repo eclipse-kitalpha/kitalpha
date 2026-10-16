@@ -161,6 +161,7 @@ location Nattable "https://download.eclipse.org/nattable/releases/2.6.0/reposito
 
 location Orbit "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2025-09" {
 	ca.odell.glazedlists lazy
+	org.apache.aries.spifly.dynamic.bundle lazy
 	org.eclipse.collections.api lazy
 	org.eclipse.collections.impl lazy
 }
