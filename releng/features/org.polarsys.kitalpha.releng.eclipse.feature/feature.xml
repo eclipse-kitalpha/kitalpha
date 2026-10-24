@@ -365,6 +365,14 @@
          version="0.0.0"/>
 
    <includes
+         id="org.eclipse.sirius.runtime.ide.ui.interpreter"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.interpreter.source"
+         version="0.0.0"/>
+
+   <includes
          id="org.eclipse.sirius.runtime.ide.xtext"
          version="0.0.0"/>
 
