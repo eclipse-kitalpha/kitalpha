@@ -197,10 +197,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.eef.sdk-feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.mapping"
          version="0.0.0"/>
 

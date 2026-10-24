@@ -74,11 +74,6 @@ location Eclipse-2025-09 "https://download.eclipse.org/releases/2025-09/" {
 	org.apache.xml.resolver lazy
 }
 
-location EEF-1.5 "https://download.eclipse.org/modeling/emft/eef/updates/releases/1.5/R201601141612" {
-        org.eclipse.emf.eef.runtime lazy
-        org.eclipse.emf.eef.sdk-feature.feature.group lazy
-}
-
 location acceleo "https://download.eclipse.org/acceleo/updates/releases/3.7/" {
 	org.eclipse.acceleo.source.feature.group [3.7.11,3.7.12)
 	org.eclipse.acceleo.doc [3.7.11,3.7.12)
