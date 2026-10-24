@@ -197,10 +197,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.eef.sdk-feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.mapping"
          version="0.0.0"/>
 
@@ -362,6 +358,14 @@
 
    <includes
          id="org.eclipse.sirius.runtime.ide.ui.source"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.interpreter"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.sirius.runtime.ide.ui.interpreter.source"
          version="0.0.0"/>
 
    <includes
