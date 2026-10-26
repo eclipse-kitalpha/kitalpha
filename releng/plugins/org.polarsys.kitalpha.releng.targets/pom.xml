@@ -35,8 +35,8 @@
 
 	<properties>
     	<sonar.skip>true</sonar.skip>
-		<tycho-version>4.0.13</tycho-version>
-		<tycho-extras-version>4.0.13</tycho-extras-version>
+		<tycho-version>5.0.4</tycho-version>
+		<tycho-extras-version>5.0.4</tycho-extras-version>
 		<converterApplication.name>org.eclipse.cbi.targetplatform.tpd.converter</converterApplication.name>
 		<target-platform-name>kitalpha</target-platform-name>
 	</properties>

@@ -16,7 +16,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<prerequisites>
-		<maven>3.0</maven>
+		<maven>3.9.9</maven>
 	</prerequisites>
 
 	<name>Kitalpha</name>
@@ -38,8 +38,8 @@
 	</licenses>
 
 	<properties>
-		<tycho-version>4.0.13</tycho-version>
-		<tycho-extras-version>4.0.13</tycho-extras-version>
+		<tycho-version>5.0.4</tycho-version>
+		<tycho-extras-version>5.0.4</tycho-extras-version>
 		<platform-version-name>2025-09</platform-version-name>
 		<tycho.scmUrl>scm:git:https://git.polarsys.org/r/kitalpha/kitalpha</tycho.scmUrl>
 		<tycho.surefire.useUIHarness>false</tycho.surefire.useUIHarness>
