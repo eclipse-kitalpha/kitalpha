@@ -17,7 +17,6 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>org.polarsys</groupId>
 	<artifactId>org.polarsys.kitalpha.releng.samplecomponent.updatesite</artifactId>
 	
 	<packaging>eclipse-repository</packaging>
