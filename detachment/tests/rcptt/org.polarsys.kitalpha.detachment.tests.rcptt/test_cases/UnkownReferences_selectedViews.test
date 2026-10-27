@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _7z-fIHN5EeaIXORVNWg1aA,_YJmsYH2hEee2APpZQTlB7g
+Contexts: _7z-fIHN5EeaIXORVNWg1aA,_YJmsYH2hEee2APpZQTlB7g,_dlne4NK5EfGk8sw3foZnOQ
 Element-Name: UnkownReferences_selectedViews
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _Zi9lcHAyEeulkKMuOPg56g
-Save-Time: 2/16/21 9:53 AM
+Runtime-Version: 2.7.4.202603251526
+Save-Time: 10/28/26, 11:23 AM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -25,7 +26,7 @@ get-view "Project Explorer" | get-tree
 get-editor "Detachment" | get-tab-folder | get-tab-item "Unknown references" | click
 get-editor "Detachment" | get-table | get-property itemCount | equals 0 | verify-true
 get-view "Project Explorer" | get-tree | select "example/example.aird" | select "example/example.aird" | get-menu 
-    -path "Open With/Generic Text Editor" | click
+    -path "Open With/Generic Code Editor" | click
 get-editor "example.aird" | get-text-viewer | key-type "M1+f"
 with [get-window "Find/Replace"] {
     get-combo -after [get-label "Find:"] | set-text "_g7IB0H2gEeeObL_D97LiYw"
