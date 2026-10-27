@@ -15,7 +15,7 @@
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="['Quality: '+confidenceLevel/]" backgroundColor="//@userColorsPalettes[name='Component%20Sample%20QA%20Colors']/@entries[name='QANodeColor']" foregroundColor="//@userColorsPalettes[name='Component%20Sample%20QA%20Colors']/@entries[name='QANodeColor']">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:'Quality: ' + self.confidenceLevel" backgroundColor="//@userColorsPalettes[name='Component%20Sample%20QA%20Colors']/@entries[name='QANodeColor']" foregroundColor="//@userColorsPalettes[name='Component%20Sample%20QA%20Colors']/@entries[name='QANodeColor']">
               <borderColor xsi:type="description:UserFixedColor" href="../../org.polarsys.kitalpha.vp.componentsample.design/description/ComponentSample.odesign#//@userColorsPalettes[name='Component%20Sample%20Colors']/@entries[name='BorderColor']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
