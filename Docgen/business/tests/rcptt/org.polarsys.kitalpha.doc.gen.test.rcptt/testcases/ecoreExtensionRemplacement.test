@@ -1,13 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_0M6wYDCMEeaFuoOf0aDQ6Q
+Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_GJAM0C2rEea53PSN5pNRIg,_0M6wYDCMEeaFuoOf0aDQ6Q
 Element-Name: ecoreExtensionRemplacement
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _j9kz8DCMEeaFuoOf0aDQ6Q
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 6/13/16 11:50 AM
+Runtime-Version: 2.5.3.202205021448
+Save-Time: 8/18/22, 11:10 AM
 Testcase-Type: ecl
 Verifications: _fHG7oDCJEeaFuoOf0aDQ6Q
 
@@ -21,8 +21,10 @@ Repace Focus diagram by "focus diagram was here" in EClass pages
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-menu "File/Restart" | click
-wait-until-eclipse-is-ready
+copy-file -source "workspace://fcore_replacement/DocGenExtensions.fcore" -destination "workspace://org.polarsys.kitalpha.doc.gen.ecore.extensions/egf/"
+
+get-view "Project Explorer" | key-type "F5"
+
 get-view "Project Explorer" | get-tree 
     | select "org.polarsys.kitalpha.doc.gen.ecore.extensions/egf/DocGenExtensions.fcore" | double-click
 with [get-editor "DocGenExtensions.fcore" | get-tree] {
