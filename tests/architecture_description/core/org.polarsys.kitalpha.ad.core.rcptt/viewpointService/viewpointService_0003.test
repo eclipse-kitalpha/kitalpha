@@ -28,7 +28,12 @@ with [get-view "Component Sample"] {
     get-tab-folder | get-tab-item Configuration | click
     get-table | select Copyright
 }
+get-view "Model Explorer" | get-tree | select a | get-menu "Close Project" | click
+get-view "Model Explorer" | get-tree | select b
+get-view "Model Explorer" | get-tree | select a
 get-view "Component Sample" | get-button "Add a new property" | get-property enablement | equals false | verify-true
+get-view "Model Explorer" | get-tree | select a | get-menu "Open Project" | click
+get-view "Model Explorer" | get-tree | select b
 get-view "Model Explorer" | get-tree | select a
 get-view "Component Sample" | get-button "Add a new property" | get-property enablement | equals true | verify-true
 with [get-view "Component Sample"] {

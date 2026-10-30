@@ -22,6 +22,7 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.egf.common.helper.ObjectHolder;
 import org.eclipse.egf.portfolio.genchain.generationChain.EmfGeneration;
 import org.eclipse.egf.portfolio.genchain.tools.utils.EcoreImporterHelper;
+import org.eclipse.emf.codegen.ecore.genmodel.GenJDKLevel;
 import org.eclipse.emf.codegen.ecore.genmodel.GenModel;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -40,7 +41,10 @@ import org.eclipse.search.ui.text.FileTextSearchScope;
 public class EmdeEcoreImporterHelper extends EcoreImporterHelper {
 
 	public static EcoreImporter createEcoreImporter(IPath containterPath, URI ecoreURI, EmfGeneration model) throws Exception {
-		return doCreateEcoreImporter(new EmdeEcoreImporterHelper(), containterPath, ecoreURI, model);
+		  EcoreImporter importer = doCreateEcoreImporter(
+		            new EmdeEcoreImporterHelper(), containterPath, ecoreURI, model);
+		    importer.getGenModel().setComplianceLevel(GenJDKLevel.JDK50_LITERAL);
+		    return importer;
 	}
 
 	@Override

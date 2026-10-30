@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _cz690HaiEeaI368ba7nlrQ
-Runtime-Version: 2.5.0.201906140854
-Save-Time: 6/25/19 2:25 PM
+Runtime-Version: 2.7.4.202603251526
+Save-Time: 10/30/26, 10:56 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -41,9 +41,7 @@ with [get-editor "visibility.spec.vptext" | get-text-viewer] {
 with [get-editor "visibility.conf.vptext" | get-text-viewer] {
     set-caret-pos 12 56
     key-type Enter
-    key-type "M1+SPACE"
-    key-type Up
-    key-type Enter
+    show-content-assist | get-window | get-table | select "View - Viewpoint View" | click -default
     key-type "M1+s"
 }
 get-view "Project Explorer" | get-tree | select "org.polarsys.kitalpha.vp.visibility.vpdsl/model/visibility.vpdesc" 
