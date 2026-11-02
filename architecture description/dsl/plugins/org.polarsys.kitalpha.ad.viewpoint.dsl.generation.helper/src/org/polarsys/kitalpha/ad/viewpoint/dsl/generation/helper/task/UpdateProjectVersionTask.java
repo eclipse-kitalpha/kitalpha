@@ -22,7 +22,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.egf.core.producer.InvocationException;
 import org.eclipse.egf.ftask.producer.context.ITaskProductionContext;
 import org.eclipse.pde.internal.core.ICoreConstants;
-import org.eclipse.pde.internal.core.natures.PluginProject;
+import org.eclipse.pde.internal.core.natures.FeatureProject;
 import org.eclipse.pde.internal.ui.util.PDEModelUtility;
 import org.osgi.framework.Constants;
 import org.polarsys.kitalpha.ad.viewpoint.dsl.generation.helper.pde.operation.BundleModelModification;
@@ -67,7 +67,7 @@ public class UpdateProjectVersionTask extends AbstractProjectUpdateTask {
 		Assert.isNotNull(version, "Version contract should have a value"); //$NON-NLS-1$
 		boolean featureProject = false;
 		try {
-            featureProject = project.hasNature(PluginProject.NATURE);
+            featureProject = project.hasNature(FeatureProject.NATURE);
 		} catch (CoreException e) {
 			throw new InvocationException(e);
 		}
