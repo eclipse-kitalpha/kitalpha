@@ -1,0 +1,18 @@
+EClass eClass = (EClass)ctx.getValue(PatternContext.INJECTED_CONTEXT);
+EList<EAnnotation> eAnnotations = eClass.getEAnnotations();
+
+out.append("<h2>Class Annotations</h2>");
+for (EAnnotation eAnnotation : eAnnotations) {
+	
+	EMap<String, String> details = eAnnotation.getDetails();
+	String source = eAnnotation.getSource();
+	
+	out.append("<b>Source: <i>").append(source).append("</i></b>");
+	out.append("<table>");
+	for (Entry<String, String> entry : details) {
+		out.append("<tr>");
+		out.append("<td>").append(entry.getKey()).append("</td><td>").append(entry.getValue()).append("</td>");
+		out.append("</tr>");
+	}
+	out.append("</table>");
+}
