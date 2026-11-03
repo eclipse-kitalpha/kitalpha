@@ -15,7 +15,7 @@ Content-Type: text/ecl
 Entry-Name: .content
 
 get-view "Project Explorer" | get-tree | select "library/model/library.ecore" | get-menu "New/Other..." | click
-with [get-window "Select a wizard"] {
+with [get-window "New"] {
     get-editbox -after [get-label "Wizards:"] | set-text generation
     get-tree | select "EGF/GenerationChain Model"
     get-button "Next >" | click
