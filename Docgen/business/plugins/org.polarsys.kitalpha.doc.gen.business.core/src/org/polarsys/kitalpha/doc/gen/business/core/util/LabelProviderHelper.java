@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2021 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -87,14 +87,16 @@ public class LabelProviderHelper {
 		return null;
 	}
 
-	public static String getImageFileName(EObject eObject, String projectName,
-			String folderName) {
-		final Object imageObject = getImage(eObject);
+	public static String getImageFileName(EObject eObject, String projectName, String folderName) {
+		return getImageFileNameFromImageObject(getImage(eObject), projectName, folderName);
+	}
+
+	protected static String getImageFileNameFromImageObject(Object imageObject, String projectName, String folderName) {
 		final Image image = getImageFromObject(imageObject);
 		final String simpleFileName = getImageName(imageObject);
 		final IFolder iconFolder = getIconFolder(projectName, folderName);
 		IFile iconFile = iconFolder.getFile(simpleFileName);
-		if (! iconFile.exists()) {
+		if (!iconFile.exists()) {
 			String withoutFileExtension = iconFile.getLocation().toString()
 					.replace(iconFile.getLocation().getFileExtension(), "");
 
