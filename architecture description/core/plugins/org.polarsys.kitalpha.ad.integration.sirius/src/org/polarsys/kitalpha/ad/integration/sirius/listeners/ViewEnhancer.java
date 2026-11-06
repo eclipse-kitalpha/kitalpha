@@ -80,7 +80,7 @@ public class ViewEnhancer extends Stub {
 							compositeFilterDescription.setName(FILTER_NAME);
 							MappingFilter mappingFilter = FilterFactory.eINSTANCE.createMappingFilter();
 							mappingFilter.setFilterKind(FilterKind.HIDE_LITERAL);
-							mappingFilter.setViewConditionExpression("<%isExtensionModelActive()%>");
+							mappingFilter.setViewConditionExpression("aql:self.isExtensionModelActive()");
 							compositeFilterDescription.getFilters().add(mappingFilter);
 							spec.getFilters().add(compositeFilterDescription);
 

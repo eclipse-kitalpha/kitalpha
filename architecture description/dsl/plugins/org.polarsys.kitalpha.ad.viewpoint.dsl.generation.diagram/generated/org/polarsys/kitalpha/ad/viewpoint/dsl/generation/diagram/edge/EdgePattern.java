@@ -209,7 +209,7 @@ public class EdgePattern
 							ExpressionInterpreter.Service);
 				}
 				if (fEE instanceof DomainElement)
-					acceleoExpression = "<%" + ((DomainElement) fEE).getAttribute().getName() + "%>";
+					acceleoExpression = "aql:self." + ((DomainElement) fEE).getAttribute().getName();
 
 				ceStyleDesc = DescriptionFactory.eINSTANCE.createConditionalEdgeStyleDescription();
 				ceStyleDesc.setPredicateExpression(acceleoExpression);
