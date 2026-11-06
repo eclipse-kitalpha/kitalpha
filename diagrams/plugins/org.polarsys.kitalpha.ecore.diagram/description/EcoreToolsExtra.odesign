@@ -294,7 +294,7 @@
       <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>
       <layout xsi:type="description_1:CompositeLayout" padding="20" direction="bottomToTop"/>
       <defaultLayer name="Default">
-        <edgeMappings name="Inheritance SuperType Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Root%20EClass'] //@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Neighbor%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Neighbor%20EClass'] //@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Root%20EClass']" targetFinderExpression="feature:eSuperTypes">
+        <edgeMappings name="Inheritance SuperType Link" semanticCandidatesExpression="aql:self.eAllContents()" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Root%20EClass'] //@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Neighbor%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Neighbor%20EClass'] //@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Inheritance']/@defaultLayer/@containerMappings[name='Inheritance%20Root%20EClass']" targetFinderExpression="feature:eSuperTypes">
           <style targetArrow="InputClosedArrow">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false">
@@ -429,14 +429,14 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Class Focus" titleExpression="[name +' - Class Focus'/]" domainClass="ecore.EClass" rootExpression="">
       <layout xsi:type="description_1:CompositeLayout" padding="40" direction="bottomToTop"/>
       <defaultLayer name="Default">
-        <edgeMappings name="EF Direct SuperType Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="[null/]" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Root%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Neighbor%20EClass']" targetFinderExpression="feature:eSuperTypes">
+        <edgeMappings name="EF Direct SuperType Link" semanticCandidatesExpression="aql:self.eAllContents()" semanticElements="[null/]" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Root%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Neighbor%20EClass']" targetFinderExpression="feature:eSuperTypes">
           <style targetArrow="InputClosedArrow" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="&lt;%self.isImplemented($view)%>">
+          <conditionnalStyles predicateExpression="aql:self.isImplemented(view)">
             <style targetArrow="InputClosedArrow" sizeComputationExpression="3" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription showIcon="false">
@@ -445,14 +445,14 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <edgeMappings name="EF Indirect SuperType Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="[null/]" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Root%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Import%20EClass']" targetFinderExpression="feature:eAllSuperTypes">
+        <edgeMappings name="EF Indirect SuperType Link" semanticCandidatesExpression="aql:self.eAllContents()" semanticElements="[null/]" sourceMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Root%20EClass']" targetMapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Import%20EClass']" targetFinderExpression="feature:eAllSuperTypes">
           <style targetArrow="InputClosedArrow" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
-          <conditionnalStyles predicateExpression="&lt;%self.isImplemented($view)%>">
+          <conditionnalStyles predicateExpression="aql:self.isImplemented(view)">
             <style targetArrow="InputClosedArrow" sizeComputationExpression="3" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription showIcon="false">
@@ -625,10 +625,10 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:elementView">
                 <subModelOperations xsi:type="tool:DeleteView">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView%>">
-                    <subModelOperations xsi:type="tool:For" expression="&lt;%eContents.filter(&quot;DEdge&quot;)[self.targetNode == $elementView || self.sourceNode == $elementView ]%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:containerView">
+                    <subModelOperations xsi:type="tool:For" expression="aql:self.eContents()->filter(diagram::DEdge)->select(e | e.targetNode = elementView or e.sourceNode = elementView)">
                       <subModelOperations xsi:type="tool:DeleteView"/>
                     </subModelOperations>
                   </subModelOperations>
@@ -636,13 +636,13 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Insert class" precondition="&lt;%$containerView.filter(&quot;DDiagram&quot;).nSize() > 0 %>" forceRefresh="true" candidatesExpression="&lt;%(self.eAllSuperTypes + self.eAllReferences.eType.filter(&quot;EClass&quot;) + self.~eType.filter(&quot;EReference&quot;).eContainer.filter(&quot;EClass&quot;) + self.eAllSuperTypes.~eType.filter(&quot;EReference&quot;).eContainer.filter(&quot;EClass&quot;)).nMinimize - $containerView.eAllContents(&quot;DNodeList&quot;).target.filter(&quot;EClass&quot;)%>" multiple="true" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EPackage.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Insert class" precondition="aql:containerView.oclIsKindOf(diagram::DDiagram)" forceRefresh="true" candidatesExpression="aql:(self.eAllSuperTypes + self.eAllReferences.eType->filter(ecore::EClass) + self.eInverse('eType')->filter(ecore::EReference).eContainer()->filter(ecore::EClass) + self.eAllSuperTypes.eInverse('eType')->filter(ecore::EReference).eContainer()->filter(ecore::EClass))->asSet() - containerView.eAllContents(diagram::DNodeList).target->filter(ecore::EClass)" multiple="true" iconPath="/org.eclipse.emf.ecore.edit/icons/full/obj16/EPackage.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool_1:CreateView" mapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Import%20EClass']" containerViewExpression="&lt;%$containerView%>"/>
+              <firstModelOperations xsi:type="tool:For" expression="aql:element">
+                <subModelOperations xsi:type="tool_1:CreateView" mapping="//@ownedViewpoints[name='EcoreToolsExtra_ClassView']/@ownedRepresentations[name='Class%20Focus']/@defaultLayer/@containerMappings[name='EF%20Import%20EClass']" containerViewExpression="aql:containerView"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
