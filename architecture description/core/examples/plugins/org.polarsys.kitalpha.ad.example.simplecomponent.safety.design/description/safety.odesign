@@ -3,7 +3,7 @@
   <ownedViewpoints name="safety" modelFileExtension="simplecomponent">
     <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="Safety Extension" viewpointURI="viewpoint:/org.polarsys.kitalpha.ad.example.simplecomponent.design/simplecomponent" representationName="ComponentModel">
       <layers name="safety" activeByDefault="true">
-        <nodeMappings xsi:type="description_1:NodeMappingImport" name="soft" preconditionExpression="&lt;%eContents().filter(&quot;SimpleVPSafety&quot;).length() > 0 %>" semanticCandidatesExpression="feature:abstractComponent" domainClass="SoftwareComponent" reusedBorderedNodeMappings="//@ownedViewpoints[name='safety']/@ownedRepresentationExtensions[name='Safety%20Extension']/@layers[name='safety']/@nodeMappings[name='safetyVP']">
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="soft" preconditionExpression="aql:self.eContents()->filter(safety::SimpleVPSafety)->notEmpty()" semanticCandidatesExpression="feature:abstractComponent" domainClass="SoftwareComponent" reusedBorderedNodeMappings="//@ownedViewpoints[name='safety']/@ownedRepresentationExtensions[name='Safety%20Extension']/@layers[name='safety']/@nodeMappings[name='safetyVP']">
           <style xsi:type="style:SquareDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -38,6 +38,7 @@
           <importedMapping href="../../org.polarsys.kitalpha.ad.example.simplecomponent.design/description/simplecomponent.odesign#//@ownedViewpoints[name='simplecomponent']/@ownedRepresentations[name='ComponentModel']/@defaultLayer/@containerMappings[name='HardwareComponent']"/>
         </containerMappings>
       </layers>
+      <metamodel href="http://www.polarsys.org/kitalpha/emde/example/simplecomponent/safety#/"/>
     </ownedRepresentationExtensions>
     <ownedJavaExtensions qualifiedClassName="org.polarsys.kitalpha.ad.example.simplecomponent.safety.design.SafetyService"/>
   </ownedViewpoints>
