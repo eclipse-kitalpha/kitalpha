@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2014, 2020 Thales Global Services S.A.S.
+ * Copyright (c) 2014, 2026 Thales Global Services S.A.S.
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 2.0 which is available at
  * http://www.eclipse.org/legal/epl-2.0
@@ -18,7 +18,26 @@ package org.polarsys.kitalpha.ad.viewpoint.dsl.as.diagram.expression.helper.siri
  */
 
 public enum ExpressionKind implements IExpressionFormat{
-	QueryLegacy, Acceleo_3_x, Ocl, AQL;
+	/**
+	 * Sirius Desktop v4.0 dropped support for Acceleo 2 expressions. Use
+	 * {@link #AQL} instead if the runtime environment of your generated code
+	 * supports it.
+	 */
+	@Deprecated
+	QueryLegacy,
+	/**
+	 * Sirius Desktop v7.5.0 dropped support for Acceleo 3 expressions. Use
+	 * {@link #AQL} instead if the runtime environment of your generated code
+	 * supports it.
+	 */
+	@Deprecated
+	Acceleo_3_x,
+	/**
+	 * Sirius Desktop v7.5.0 dropped support for OCL expressions. Use {@link #AQL}
+	 * instead if the runtime environment of your generated code supports it.
+	 */
+	@Deprecated
+	Ocl, AQL;
 	
 	/**
 	 * @see IExpressionFormat#format(String)
