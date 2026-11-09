@@ -62,7 +62,8 @@
          <attribute name="language" use="required">
             <annotation>
                <documentation>
-                  
+                  Sirius Desktop has dropped support for Acceleo 2 expressions (QueryLegacy) in version 4.0, and for Acceleo 3 expressions in version 7.5.0.
+It is recommended to use AQL expressions whenever possible instead.
                </documentation>
             </annotation>
             <simpleType>
