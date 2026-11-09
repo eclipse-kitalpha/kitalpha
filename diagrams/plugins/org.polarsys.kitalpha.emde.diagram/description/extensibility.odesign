@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" name="Model Extensibility Modeler" version="8.1.0">
   <ownedViewpoints name="Extensibility" modelFileExtension="ecore">
-    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Model Extensibility Properties" titleExpression="[name + 'Model Extensibility Properties'/]" domainClass="ecore.EPackage">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Model Extensibility Properties" titleExpression="aql:self.name + 'Model Extensibility Properties'" domainClass="ecore.EPackage">
       <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>
-      <ownedLineMappings name="MP - Package" domainClass="ecore.EPackage" semanticCandidatesExpression="[self/]" headerLabelExpression="[name +' Package'/]">
-        <ownedSubLines name="MP - Entry" semanticElements="" domainClass="EStringToStringMapEntry" semanticCandidatesExpression="service:getEntry()" headerLabelExpression="[key.getEntryLabel()/]"/>
+      <ownedLineMappings name="MP - Package" domainClass="ecore.EPackage" semanticCandidatesExpression="aql:self" headerLabelExpression="aql:self.name +' Package'">
+        <ownedSubLines name="MP - Entry" semanticElements="" domainClass="EStringToStringMapEntry" semanticCandidatesExpression="service:getEntry()" headerLabelExpression="aql:self.key.getEntryLabel()"/>
         <ownedSubLines name="MP - EClass" reusedInMappings="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20SubPackage']" domainClass="EClass" semanticCandidatesExpression="feature:eClassifiers" headerLabelExpression="service:getLineLabel()"/>
-        <ownedSubLines name="MP - SubPackage" reusedSubLines="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20EClass'] //@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20SubPackage']" reusedInMappings="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20SubPackage']" domainClass="ecore.EPackage" semanticCandidatesExpression="feature:eSubpackages" headerLabelExpression="[name +' Package'/]"/>
+        <ownedSubLines name="MP - SubPackage" reusedSubLines="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20EClass'] //@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20SubPackage']" reusedInMappings="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Model%20Extensibility%20Properties']/@ownedLineMappings[name='MP%20-%20Package']/@ownedSubLines[name='MP%20-%20SubPackage']" domainClass="ecore.EPackage" semanticCandidatesExpression="feature:eSubpackages" headerLabelExpression="aql:self.name +' Package'"/>
       </ownedLineMappings>
-      <ownedColumnMappings name="Value" headerLabelExpression="Value" canEdit="[true/]" featureName="value" labelExpression="service:getValue()">
+      <ownedColumnMappings name="Value" headerLabelExpression="Value" canEdit="aql:true" featureName="value" labelExpression="service:getValue()">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
           <variables name="root" documentation="The semantic element of the table."/>
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:root">
-            <subModelOperations xsi:type="tool:If" conditionExpression="[element.eClass().eGet('name').equalsIgnoreCase('EStringToStringMapEntry')/]">
+            <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.eClass().eGet('name').equalsIgnoreCase('EStringToStringMapEntry')">
               <subModelOperations xsi:type="tool:ExternalJavaAction" name="Annotation Set Value Action" forceRefresh="true" id="org.polarsys.kitalpha.emde.diagram.javaaction.AnnotationSetValueAction">
                 <parameters name="object" value="var:element"/>
                 <parameters name="input" value="var:0"/>
@@ -23,24 +23,24 @@
           </firstModelOperation>
           <mask mask="{0}"/>
         </directEdit>
-        <backgroundConditionalStyle predicateExpression="[getValue() = 'true'/]">
+        <backgroundConditionalStyle predicateExpression="aql:self.getValue() = 'true'">
           <style>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </backgroundConditionalStyle>
-        <backgroundConditionalStyle predicateExpression="[getValue() &lt;> 'true'/]">
+        <backgroundConditionalStyle predicateExpression="aql:self.getValue() &lt;> 'true'">
           <style>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </backgroundConditionalStyle>
       </ownedColumnMappings>
-      <ownedColumnMappings name="Is EClass extensible" headerLabelExpression="Is EClass extensible ?" canEdit="[true/]" featureName="name" labelExpression="service:getValue()">
+      <ownedColumnMappings name="Is EClass extensible" headerLabelExpression="Is EClass extensible ?" canEdit="aql:true" featureName="name" labelExpression="service:getValue()">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
           <variables name="root" documentation="The semantic element of the table."/>
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="var:root">
-            <subModelOperations xsi:type="tool:If" conditionExpression="[element.eClass().eGet('name').equalsIgnoreCase('EClass')/]">
+            <subModelOperations xsi:type="tool:If" conditionExpression="aql:element.eClass().eGet('name').equalsIgnoreCase('EClass')">
               <subModelOperations xsi:type="tool:ExternalJavaAction" name="Make Class Extensible Action" forceRefresh="true" id="org.polarsys.kitalpha.emde.diagram.javaaction.MakeClassExtensibleAction">
                 <parameters name="object" value="var:element"/>
                 <parameters name="input" value="var:0"/>
@@ -49,27 +49,27 @@
           </firstModelOperation>
           <mask mask="{0}"/>
         </directEdit>
-        <backgroundConditionalStyle predicateExpression="[getValue() = 'true'/]">
+        <backgroundConditionalStyle predicateExpression="aql:self.getValue() = 'true'">
           <style>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </backgroundConditionalStyle>
-        <backgroundConditionalStyle predicateExpression="[getValue() = 'false'/]">
+        <backgroundConditionalStyle predicateExpression="aql:self.getValue() = 'false'">
           <style>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
           </style>
         </backgroundConditionalStyle>
       </ownedColumnMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Extensibility Description" titleExpression="[name +'Extensibility Description'/]" domainClass="ecore.EPackage">
+    <ownedRepresentations xsi:type="description_2:DiagramDescription" name="Extensibility Description" titleExpression="aql:self.name +'Extensibility Description'" domainClass="ecore.EPackage">
       <metamodel href="http://www.eclipse.org/emf/2002/Ecore#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="ED - External Extension Link" deletionDescription="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='Extension%20Link%20Deleting']" semanticCandidatesExpression="[diagram.eGet('target').eAllContents()/]" sourceMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extended%20Model']" targetFinderExpression="service:getExtendedModel()" sourceFinderExpression="service:SFE_ExtensionLink()" domainClass="ecore.EStringToStringMapEntry" useDomainElement="true">
+        <edgeMappings name="ED - External Extension Link" deletionDescription="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='Extension%20Link%20Deleting']" semanticCandidatesExpression="aql:diagram.eGet('target').eAllContents()" sourceMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extended%20Model']" targetFinderExpression="service:getExtendedModel()" sourceFinderExpression="service:SFE_ExtensionLink()" domainClass="ecore.EStringToStringMapEntry" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="ED - Internal Extension Link" deletionDescription="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='Extension%20Link%20Deleting']" semanticCandidatesExpression="[diagram.eGet('target').eAllContents()/]" sourceMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetFinderExpression="service:getExtendedModel()" sourceFinderExpression="service:SFE_ExtensionLink()" domainClass="EStringToStringMapEntry" useDomainElement="true">
+        <edgeMappings name="ED - Internal Extension Link" deletionDescription="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='Extension%20Link%20Deleting']" semanticCandidatesExpression="aql:diagram.eGet('target').eAllContents()" sourceMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetMapping="//@ownedViewpoints[name='Extensibility']/@ownedRepresentations[name='Extensibility%20Description']/@defaultLayer/@containerMappings[name='ED%20-%20Extensible%20Element']" targetFinderExpression="service:getExtendedModel()" sourceFinderExpression="service:SFE_ExtensionLink()" domainClass="EStringToStringMapEntry" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -105,11 +105,11 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Remove extension" precondition="[elementView.eGet('target').oclIsKindOf(ecore::EClass)/]" forceRefresh="true" iconPath="/org.polarsys.kitalpha.emde.diagram/icons/tools/delete.gif">
+          <ownedTools xsi:type="tool:ToolDescription" name="Remove extension" precondition="aql:elementView.eGet('target').oclIsKindOf(ecore::EClass)" forceRefresh="true" iconPath="/org.polarsys.kitalpha.emde.diagram/icons/tools/delete.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[elementView/]">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:elementView">
                 <subModelOperations xsi:type="tool:ExternalJavaAction" name="Remove Extensibility Action" id="org.polarsys.kitalpha.emde.diagram.javaaction.RemoveExtensibilityAction">
                   <parameters name="element" value="var:element"/>
                   <parameters name="view" value="var:elementView"/>
@@ -118,7 +118,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ToolDescription" name="Extend Model" precondition="[elementView.eGet('target').oclIsKindOf(ecore::EClass)/]" iconPath="/org.polarsys.kitalpha.emde.diagram/icons/tools/ExtendModels.gif">
+          <ownedTools xsi:type="tool:ToolDescription" name="Extend Model" precondition="aql:elementView.eGet('target').oclIsKindOf(ecore::EClass)" iconPath="/org.polarsys.kitalpha.emde.diagram/icons/tools/ExtendModels.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
