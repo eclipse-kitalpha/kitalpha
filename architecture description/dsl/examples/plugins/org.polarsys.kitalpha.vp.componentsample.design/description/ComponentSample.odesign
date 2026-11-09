@@ -130,7 +130,7 @@
             <containerView name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="use" elementExpression="[elementView.targetNode.oclAsType(viewpoint::DSemanticDecorator).target/]"/>
+                <subModelOperations xsi:type="tool_1:Unset" featureName="use" elementExpression="aql:elementView.targetNode.target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -142,9 +142,9 @@
             <element name="element"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="use" elementExpression="[edgeView.targetNode.oclAsType(viewpoint::DSemanticDecorator).target/]"/>
+                <subModelOperations xsi:type="tool_1:Unset" featureName="use" elementExpression="aql:edgeView.targetNode.target"/>
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="use" valueExpression="[edgeView.targetNode.oclAsType(viewpoint::DSemanticDecorator).target/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="use" valueExpression="aql:edgeView.targetNode.target"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
