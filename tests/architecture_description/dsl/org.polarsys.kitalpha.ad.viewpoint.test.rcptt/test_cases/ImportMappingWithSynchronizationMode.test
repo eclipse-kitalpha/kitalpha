@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _GHzeAHqOEeadK6jIYFHAOw
-Runtime-Version: 2.5.5.202312181455
-Save-Time: 4/4/24, 11:41 AM
+Runtime-Version: 2.7.4.202603251526
+Save-Time: 10/30/26, 10:20 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -34,11 +34,7 @@ with [get-editor "test.spec.vptext" | get-text-viewer] {
     set-caret-pos 11 19
     key-type Up
     key-type Enter
-    type-text use
-    show-content-assist
-    key-type Down -times 2
-    key-type Enter
-    type-text " "
+    type-text "uses diagram "
     show-content-assist | get-window | get-table 
     | select "platform:\\/plugin\\/org.polarsys.kitalpha.vp.componentsample.design\\/description\\/ComponentSample.odesign" 
     | click -default

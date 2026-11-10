@@ -42,9 +42,11 @@ with [get-editor "[Component Model]" | get-tab-folder] {
 }
 get-view "Project Explorer" | get-tree | select "A/*My.aird" | get-menu "Viewpoints selection" | click
 with [get-window "Viewpoints Selection" | get-table] {
-    get-item "" -index 1 | get-property "columns[0]" | equals true | verify-true
+    get-item "" -index 1 | get-property "cells[0].image.path"
+        | equals "org.polarsys.kitalpha.ad.integration.sirius/icons/checkboxgrayedselected.gif" | verify-true
     get-item "" -index 1 | get-property "columns[2]" | equals ComponentSampleQualityAssessment | verify-true
-    get-item "" | get-property "columns[0]" | equals true | verify-true
+    get-item "" | get-property "cells[0].image.path"
+        | equals "org.polarsys.kitalpha.ad.integration.sirius/icons/checkboxgrayedselected.gif" | verify-true
     get-item "" | get-property "columns[2]" | equals ComponentSamplePerformance | verify-true
 }
 get-window "Viewpoints Selection" | get-button Cancel | click
