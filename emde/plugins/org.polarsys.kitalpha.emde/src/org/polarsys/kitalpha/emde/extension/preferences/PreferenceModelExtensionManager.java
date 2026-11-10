@@ -44,7 +44,7 @@ public class PreferenceModelExtensionManager extends DefaultModelExtensionManage
 
 	@Override
 	public boolean isExtensionModelDisabled(ExtendedModel extendedModel) {
-		return getPreferencesRoot().getBoolean(computeKey(extendedModel), false);
+		return getPreferencesRoot().getBoolean(computeKey(extendedModel), true);
 	}
 
 	protected String computeKey(ExtendedModel extendedModel) {
