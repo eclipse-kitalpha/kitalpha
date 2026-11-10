@@ -1,13 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_GDJ5gDCKEeaFuoOf0aDQ6Q
+Contexts: _dNztIDCIEeaFuoOf0aDQ6Q,_GJAM0C2rEea53PSN5pNRIg,_GDJ5gDCKEeaFuoOf0aDQ6Q
 Element-Name: ecoreExtensionDocGenCopyright
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _7REP8DCJEeaFuoOf0aDQ6Q
-Runtime-Version: 2.0.2.201511100828
-Save-Time: 6/13/16 11:47 AM
+Runtime-Version: 2.5.3.202205021448
+Save-Time: 8/18/22, 11:10 AM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -20,8 +20,10 @@ Add Copyright at the buttom of all pages
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-menu "File/Restart" | click
-wait-until-eclipse-is-ready
+copy-file -source "workspace://fcore_copyright/DocGenExtensions.fcore" -destination "workspace://org.polarsys.kitalpha.doc.gen.ecore.extensions/egf/"
+
+get-view "Project Explorer" | key-type "F5"
+
 get-view "Project Explorer" | get-tree | get-item "docgen/doc" | get-property childCount | equals 0 | verify-true
 get-menu "Search/File..." | click
 with [get-window Search] {
