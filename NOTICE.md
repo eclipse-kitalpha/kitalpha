@@ -1,14 +1,12 @@
-# Notices for Polarsys Kitalpha
+# Notices for Kitalpha
 
-This content is produced and maintained by the Polarsys Kitalpha project.
+This content is produced and maintained by the Kitalpha project.
 
-
-* Project home: https://www.eclipse.org/kitalpha/
-* Project portal: https://projects.eclipse.org/projects/polarsys.kitalpha
+* Project home: https://projects.eclipse.org/projects/polarsys.kitalpha
 
 ## Trademarks
 
-Polarsys Kitalpha, and Kitalpha are trademarks of the Eclipse Foundation.
+Kitalpha™ is a trademark of the Eclipse Foundation.
 
 ## Copyright
 
@@ -28,36 +26,10 @@ SPDX-License-Identifier: EPL-2.0
 
 The project maintains the following source code repositories:
 
-* https://github.com/eclipse/kitalpha/
-* https://github.com/eclipse/kitalpha-addons/
-
-## Third-party Content
-
-This project leverages the following third party content.
-
-swtsplitbutton with the IKOffice copyright Version: 1.3
-
-* Eclipse Public License
-
-Sublink Icons Sweetie Plus
-
-* Creative Commons Attribution-ShareAlike 3.0 Unported (CC By-SA 3.0)
-
-Icon Set: Fam Fam Silk Icon Set Version 1.3 
-
-* Creative Commons Attribution License 2.5
-
-jQuery Treeview 1.5pre
-
-* MIT License
-
-JQuery v1.11.1
-
-* MIT License
-
-ANTLR Runtime only: Version Version: 3.2 
-
-* New BSD license
+* https://github.com/eclipse-kitalpha/.github
+* https://github.com/eclipse-kitalpha/kitalpha
+* https://github.com/eclipse-kitalpha/kitalpha-addons
+* https://github.com/eclipse-kitalpha/kitalpha-website
 
 ## Cryptography
 
