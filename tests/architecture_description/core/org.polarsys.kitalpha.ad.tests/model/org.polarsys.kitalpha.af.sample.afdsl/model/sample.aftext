@@ -1,0 +1,17 @@
+/**
+ * Copyright (c) PolarSys, 2023. All rights reserved. 
+ *
+ *	Architecture Framework sample
+ *	@author: Erwann Traisnel
+ *	@date: 3 avr. 2023
+ *
+ */
+ArchitectureFramework sample {
+	shortName: "sample"
+	Viewpoints {
+	
+	}
+	Configuration {
+		rootProjectName: org.polarsys.kitalpha.af.sample
+	}
+}
